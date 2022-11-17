@@ -19,7 +19,7 @@
       <xs:element name="prerequisites" type="Prerequisites" minOccurs="0"/>
       <xs:element name="specificationPerObjectType" type="SpecificationPerObjectType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute name="globalId" type="xs:string"/>
+    <xs:attribute name="UUID" type="xs:string"/>
     <xs:attribute name="name" type="xs:string"/>
   </xs:complexType>
 
@@ -38,7 +38,7 @@
       <xs:element name="geometricalInformation" type="GeometricalInformation" minOccurs="0"/>
       <xs:element name="alphanumericalInformation" type="T_DataTemplate" minOccurs="0"/>
     </xs:sequence>
-    <xs:attribute name="globalId" type="xs:string"/>
+    <xs:attribute name="UUID" type="xs:string"/>
   </xs:complexType>
 
 
