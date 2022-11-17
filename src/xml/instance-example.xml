@@ -1,26 +1,18 @@
 <LevelOfInformationNeed globalId="string" name="string">
   <!--Optional:-->
-  <description>string</description>
+  <description>Example LOIN Definition using ISO 23387 refrences to PDTs</description>
   <!--Optional:-->
   <prerequisites purpose="string" informationDeliveryMilestone="string" sendingActor="string" receivingActor="string"/>
   <!--Zero or more repetitions:-->
   <specificationPerObjectType globalId="string">
     <!--Optional:-->
-    <objectType UUID="string" Date="2008-09-29T03:49:45" Document_URI="string">
+    <objectType UUID="" Date="2008-09-29T03:49:45" Document_URI="string">
       <!--1 or more repetitions:-->
-      <Name UUID="string" LanguageCode="string">string</Name>
+      <Name UUID="8b376c76-0861-43dd-bc35-fff3cc2cea2c" LanguageCode="en">Test LOIN for windows</Name>
       <!--1 or more repetitions:-->
-      <Definition UUID="string" LanguageCode="string">string</Definition>
+      <Definition UUID="08193c09-7fef-42b6-82f2-e3acf0903983" LanguageCode="en">Demonstrating the integration of LOIN definitions with PDT Templates</Definition>
       <!--Zero or more repetitions:-->
-      <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
-      <!--Optional:-->
-      <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
     </objectType>
-    <!--Optional:-->
-    <documentation>
-      <!--Optional:-->
-      <requiredDocument type="string" purpose="string" content="string"/>
-    </documentation>
     <!--Optional:-->
     <geometricalInformation>
       <!--Optional:-->
@@ -45,10 +37,10 @@
       <!--Optional:-->
       <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
       <IsDataTemplateFor LinkUUID="string" TargetName="string" TargetUUID="string"/>
-      <!--Zero or more repetitions:-->
-      <SetOfProperties LinkUUID="string" TargetName="string" TargetUUID="string"/>
-      <!--Zero or more repetitions:-->
-      <Property LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <!--This refers to Dimensions classification definition defined in Window_DT_Library -->
+      <SetOfProperties LinkUUID="20f434c3-634d-4fcc-ba62-04106efb8eef" TargetName="Dimensions" TargetUUID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+      <!--This refers to a Fire classification definition defined in Window_DT_Library -->
+      <Property TargetName="Fire classification" TargetUUID="e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/>
     </alphanumericalInformation>
   </specificationPerObjectType>
 </LevelOfInformationNeed>
