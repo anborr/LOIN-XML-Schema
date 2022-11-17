@@ -1,0 +1,54 @@
+<LevelOfInformationNeed globalId="string" name="string">
+  <!--Optional:-->
+  <description>string</description>
+  <!--Optional:-->
+  <prerequisites purpose="string" informationDeliveryMilestone="string" sendingActor="string" receivingActor="string"/>
+  <!--Zero or more repetitions:-->
+  <specificationPerObjectType globalId="string">
+    <!--Optional:-->
+    <objectType UUID="string" Date="2008-09-29T03:49:45" Document_URI="string">
+      <!--1 or more repetitions:-->
+      <Name UUID="string" LanguageCode="string">string</Name>
+      <!--1 or more repetitions:-->
+      <Definition UUID="string" LanguageCode="string">string</Definition>
+      <!--Zero or more repetitions:-->
+      <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <!--Optional:-->
+      <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    </objectType>
+    <!--Optional:-->
+    <documentation>
+      <!--Optional:-->
+      <requiredDocument type="string" purpose="string" content="string"/>
+    </documentation>
+    <!--Optional:-->
+    <geometricalInformation>
+      <!--Optional:-->
+      <detail>L4</detail>
+      <!--Optional:-->
+      <dimensionality>D0</dimensionality>
+      <!--Optional:-->
+      <location>Absolute</location>
+      <!--Optional:-->
+      <appearance>SingleColor</appearance>
+      <!--Optional:-->
+      <parametricBehaviour>ConstructiveGeometry</parametricBehaviour>
+    </geometricalInformation>
+    <!--Optional:-->
+    <alphanumericalInformation UUID="string" Date="2008-11-15T17:52:58" Document_URI="string">
+      <!--1 or more repetitions:-->
+      <Name UUID="string" LanguageCode="string">string</Name>
+      <!--1 or more repetitions:-->
+      <Definition UUID="string" LanguageCode="string">string</Definition>
+      <!--Zero or more repetitions:-->
+      <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <!--Optional:-->
+      <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <IsDataTemplateFor LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <!--Zero or more repetitions:-->
+      <SetOfProperties LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <!--Zero or more repetitions:-->
+      <Property LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    </alphanumericalInformation>
+  </specificationPerObjectType>
+</LevelOfInformationNeed>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:include schemaLocation="EN_ISO_23387.xsd" />
+
+  <xs:element name="LevelOfInformationNeed">
+    <xs:annotation>
+      <xs:documentation>Level of Information Need as defined by EN 17412</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="Specification"/>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="Specification">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="prerequisites" type="Prerequisites" minOccurs="0"/>
+      <xs:element name="specificationPerObjectType" type="SpecificationPerObjectType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="globalId" type="xs:string"/>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="Prerequisites">
+    <xs:sequence/>
+    <xs:attribute name="purpose" type="xs:string"/>
+    <xs:attribute name="informationDeliveryMilestone" type="xs:string"/>
+    <xs:attribute name="sendingActor" type="xs:string"/>
+    <xs:attribute name="receivingActor" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="SpecificationPerObjectType">
+    <xs:sequence>
+      <xs:element name="objectType" type="T_ConstructionObject" minOccurs="0"/>
+      <xs:element name="documentation" type="Documentation" minOccurs="0"/>
+      <xs:element name="geometricalInformation" type="GeometricalInformation" minOccurs="0"/>
+      <xs:element name="alphanumericalInformation" type="T_DataTemplate" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="globalId" type="xs:string"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="Documentation">
+    <xs:sequence>
+      <xs:element name="requiredDocument" type="RequiredDocument" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RequiredDocument">
+    <xs:sequence/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="purpose" type="xs:string"/>
+    <xs:attribute name="content" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="GeometricalInformation">
+    <xs:sequence>
+      <xs:element name="detail" type="DetailEnum" minOccurs="0"/>
+      <xs:element name="dimensionality" type="DimensionalityEnum" minOccurs="0"/>
+      <xs:element name="location" type="LocationEnum" minOccurs="0"/>
+      <xs:element name="appearance" type="AppearanceEnum" minOccurs="0"/>
+      <xs:element name="parametricBehaviour" type="ParametricBehaviourEnum" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="DetailEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="L1"/>
+      <xs:enumeration value="L2"/>
+      <xs:enumeration value="L3"/>
+      <xs:enumeration value="L4"/>
+      <xs:enumeration value="L5"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DimensionalityEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="D0"/>
+      <xs:enumeration value="D1"/>
+      <xs:enumeration value="D2"/>
+      <xs:enumeration value="D3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="LocationEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Absolute"/>
+      <xs:enumeration value="Relative"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AppearanceEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoColor"/>
+      <xs:enumeration value="SingleColor"/>
+      <xs:enumeration value="MaterialColor"/>
+      <xs:enumeration value="Textures"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ParametricBehaviourEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExplicitGeometry"/>
+      <xs:enumeration value="ConstructiveGeometry"/>
+      <xs:enumeration value="ParametricGeometry"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
