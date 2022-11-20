@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://iso.org/2022/LOIN" xmlns="https://iso.org/2022/LOIN"
   xmlns:pdt="https://iso.org/2022/ProductDataTemplates"
@@ -25,7 +25,7 @@
       <xs:element name="SpecificationPerObjectType" type="SpecificationPerObjectType"
         nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute name="globalId" type="xs:string"/>
+    <xs:attribute name="UUID" type="xs:string"/>
     <xs:attribute name="name" type="xs:string"/>
   </xs:complexType>
 
@@ -45,7 +45,7 @@
       <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:T_DataTemplate">
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="globalId" type="xs:string"/>
+    <xs:attribute name="UUID" type="xs:string"/>
   </xs:complexType>
   <xs:complexType name="Documentation">
     <xs:sequence>

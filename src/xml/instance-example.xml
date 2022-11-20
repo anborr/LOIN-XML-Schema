@@ -1,10 +1,12 @@
-<LevelOfInformationNeed globalId="string" name="string">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<LevelOfInformationNeed UUID="string" name="string">
   <!--Optional:-->
   <description>Example LOIN Definition using ISO 23387 refrences to PDTs</description>
   <!--Optional:-->
   <prerequisites purpose="string" informationDeliveryMilestone="string" sendingActor="string" receivingActor="string"/>
   <!--Zero or more repetitions:-->
-  <specificationPerObjectType globalId="string">
+  <specificationPerObjectType UUID="string">
     <!--Optional:-->
     <objectType UUID="" Date="2008-09-29T03:49:45" Document_URI="string">
       <!--1 or more repetitions:-->
