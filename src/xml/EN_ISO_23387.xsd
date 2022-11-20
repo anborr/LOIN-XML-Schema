@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- edited with XMLSpy v2022 rel. 2 (x64) (http://www.altova.com) by Grand (my company) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
+	attributeFormDefault="unqualified" vc:minVersion="1.1"
+	targetNamespace="https://iso.org/2022/ProductDataTemplates"
+	xmlns="https://iso.org/2022/ProductDataTemplates">
 	<xs:element name="DT_Library">
 		<xs:annotation>
 			<xs:documentation>To be exported as xtdDictionary in ISO 12006-3</xs:documentation>
@@ -27,7 +31,7 @@
 			<xs:field xpath="@LanguageCode"/>
 		</xs:keyref>
 		<xs:keyref name="CO_Lang_Link" refer="Language_Code">
-			<xs:selector xpath="*/Name|*/Definition|*"/>
+			<xs:selector xpath="*/Name | */Definition | *"/>
 			<xs:field xpath="@LanguageCode"/>
 		</xs:keyref>
 		<xs:key name="CO_Key">
@@ -149,7 +153,8 @@
 		<xs:sequence>
 			<xs:element name="LibraryName" type="T_Text" maxOccurs="unbounded"/>
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
-				<xs:element name="ConstructionObject" type="T_ConstructionObject" maxOccurs="unbounded">
+				<xs:element name="ConstructionObject" type="T_ConstructionObject"
+					maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>To be exported as xtdSubject in ISO 12006-3</xs:documentation>
 					</xs:annotation>
@@ -159,7 +164,8 @@
 						<xs:documentation>To be exported as xtdSubject in ISO 12006-3</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="SetOfProperties" type="T_SetOfProperties" minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="SetOfProperties" type="T_SetOfProperties" minOccurs="0"
+					maxOccurs="unbounded">
 					<xs:annotation>
 						<xs:documentation>To be exported as xtdSubject in ISO 12006-3</xs:documentation>
 					</xs:annotation>
@@ -176,9 +182,12 @@
 				</xs:element>
 				<xs:element name="Unit" type="T_Unit" minOccurs="0" maxOccurs="unbounded"/>
 				<xs:element name="Dimension" type="T_Dimension" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="PhysicalQuantity" type="T_PhysicalQuantity" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="ReferenceDocument" type="T_ReferenceDocument" minOccurs="0" maxOccurs="unbounded"/>
-				<xs:element name="ExternalDictionary" type="T_ExternalDictionary" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PhysicalQuantity" type="T_PhysicalQuantity" minOccurs="0"
+					maxOccurs="unbounded"/>
+				<xs:element name="ReferenceDocument" type="T_ReferenceDocument" minOccurs="0"
+					maxOccurs="unbounded"/>
+				<xs:element name="ExternalDictionary" type="T_ExternalDictionary" minOccurs="0"
+					maxOccurs="unbounded"/>
 			</xs:choice>
 		</xs:sequence>
 		<xs:attribute name="UUID" type="T_UUID" use="required"/>
@@ -238,7 +247,8 @@
 			<xs:element name="Values">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="ValueItem" type="T_PredefinedValue" maxOccurs="unbounded"/>
+						<xs:element name="ValueItem" type="T_PredefinedValue" maxOccurs="unbounded"
+						/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -257,12 +267,14 @@
 					<xs:element name="Symbol" type="xs:string" minOccurs="0"/>
 					<xs:element name="Unit" type="T_Link" minOccurs="0" maxOccurs="unbounded"/>
 					<xs:element name="PhysicalQuantity" type="T_Link" minOccurs="0"/>
-					<xs:element name="PredefinedValues" type="T_PredefinedValues" minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="PredefinedValues" type="T_PredefinedValues" minOccurs="0"
+						maxOccurs="unbounded">
 						<xs:annotation>
 							<xs:documentation>One set of predefined values per language or per Unit</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="Boundary" type="T_Boundary" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Boundary" type="T_Boundary" minOccurs="0"
+						maxOccurs="unbounded"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -353,7 +365,9 @@
 	</xs:simpleType>
 	<xs:simpleType name="T_UUID">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"/>
+			<xs:pattern
+				value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+			/>
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>

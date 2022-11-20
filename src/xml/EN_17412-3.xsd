@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:include schemaLocation="EN_ISO_23387.xsd" />
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://iso.org/2022/LOIN" xmlns="https://iso.org/2022/LOIN"
+  xmlns:pdt="https://iso.org/2022/ProductDataTemplates"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
+  attributeFormDefault="unqualified" vc:minVersion="1.1">
 
+  <xs:import namespace="https://iso.org/2022/ProductDataTemplates" schemaLocation="EN_ISO_23387.xsd"
+    id="pdt"/>
   <xs:element name="LevelOfInformationNeed">
     <xs:annotation>
       <xs:documentation>Level of Information Need as defined by EN 17412</xs:documentation>
@@ -15,9 +20,10 @@
 
   <xs:complexType name="Specification">
     <xs:sequence>
-      <xs:element name="description" type="xs:string" minOccurs="0"/>
-      <xs:element name="prerequisites" type="Prerequisites" minOccurs="0"/>
-      <xs:element name="specificationPerObjectType" type="SpecificationPerObjectType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Description" type="xs:string" minOccurs="0"/>
+      <xs:element name="Prerequisites" type="Prerequisites" minOccurs="0"/>
+      <xs:element name="SpecificationPerObjectType" type="SpecificationPerObjectType"
+        nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="globalId" type="xs:string"/>
     <xs:attribute name="name" type="xs:string"/>
@@ -33,18 +39,17 @@
 
   <xs:complexType name="SpecificationPerObjectType">
     <xs:sequence>
-      <xs:element name="objectType" type="T_ConstructionObject" minOccurs="0"/>
-      <xs:element name="documentation" type="Documentation" minOccurs="0"/>
-      <xs:element name="geometricalInformation" type="GeometricalInformation" minOccurs="0"/>
-      <xs:element name="alphanumericalInformation" type="T_DataTemplate" minOccurs="0"/>
+      <xs:element name="ObjectType" minOccurs="0" type="pdt:T_ConstructionObject"/>
+      <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
+      <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
+      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:T_DataTemplate">
+      </xs:element>
     </xs:sequence>
     <xs:attribute name="globalId" type="xs:string"/>
   </xs:complexType>
-
-
   <xs:complexType name="Documentation">
     <xs:sequence>
-      <xs:element name="requiredDocument" type="RequiredDocument" minOccurs="0"/>
+      <xs:element name="RequiredDocument" type="RequiredDocument" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -57,11 +62,11 @@
 
   <xs:complexType name="GeometricalInformation">
     <xs:sequence>
-      <xs:element name="detail" type="DetailEnum" minOccurs="0"/>
-      <xs:element name="dimensionality" type="DimensionalityEnum" minOccurs="0"/>
-      <xs:element name="location" type="LocationEnum" minOccurs="0"/>
-      <xs:element name="appearance" type="AppearanceEnum" minOccurs="0"/>
-      <xs:element name="parametricBehaviour" type="ParametricBehaviourEnum" minOccurs="0"/>
+      <xs:element name="Detail" type="DetailEnum" minOccurs="0"/>
+      <xs:element name="Dimensionality" type="DimensionalityEnum" minOccurs="0"/>
+      <xs:element name="Location" type="LocationEnum" minOccurs="0"/>
+      <xs:element name="Appearance" type="AppearanceEnum" minOccurs="0"/>
+      <xs:element name="ParametricBehaviour" type="ParametricBehaviourEnum" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -108,4 +113,3 @@
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>
-
