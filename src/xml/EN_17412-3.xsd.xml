@@ -1,0 +1,116 @@
+<DT_Library UUID="string">
+  <!--1 or more repetitions:-->
+  <LibraryName UUID="string" LanguageCode="string">string</LibraryName>
+  <!--You have a CHOICE of the next 10 items at this level-->
+  <!--1 or more repetitions:-->
+  <ConstructionObject UUID="string" Date="2008-09-29T03:49:45" Document_URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </ConstructionObject>
+  <!--1 or more repetitions:-->
+  <DataTemplate UUID="string" Date="2014-09-19T01:18:33" Document_URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <IsDataTemplateFor LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Zero or more repetitions:-->
+    <SetOfProperties LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Zero or more repetitions:-->
+    <Property LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </DataTemplate>
+  <!--Zero or more repetitions:-->
+  <SetOfProperties UUID="string" Date="2006-08-19T19:27:14+02:00" Document_URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Zero or more repetitions:-->
+    <SetOfProperties LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--1 or more repetitions:-->
+    <Property LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </SetOfProperties>
+  <!--1 or more repetitions:-->
+  <Property UUID="string" Date="2009-05-16T14:42:28" Document_URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <Datatype>STRING</Datatype>
+    <!--Optional:-->
+    <Symbol>string</Symbol>
+    <!--Zero or more repetitions:-->
+    <Unit LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <PhysicalQuantity LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Zero or more repetitions:-->
+    <PredefinedValues UUID="string" LanguageCode="string">
+      <!--Optional:-->
+      <Unit LinkUUID="string" TargetName="string" TargetUUID="string"/>
+      <Values>
+        <!--1 or more repetitions:-->
+        <ValueItem OrderNo="3" Value="string"/>
+      </Values>
+    </PredefinedValues>
+    <!--Zero or more repetitions:-->
+    <Boundary BoundaryLimit="MIN" Inclusive="false" BoundaryValue="1.051732E7"/>
+  </Property>
+  <Language UUID="string" Code="string" Name="string"/>
+  <!--Zero or more repetitions:-->
+  <Unit UUID="string" Date="2012-09-13T15:00:34+02:00" Document_URI="string" Symbol="string" Scale="LOGARITHMIC" Base="TEN" Coefficient="1.051732E7" Offset="1.051732E7">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <Dimension LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </Unit>
+  <!--Zero or more repetitions:-->
+  <Dimension UUID="string" L="3" T="3" M="3" Theta="3" N="3" I="3" J="3"/>
+  <!--Zero or more repetitions:-->
+  <PhysicalQuantity UUID="string" Date="2012-01-07T20:42:56" Document_URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <Dimension LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </PhysicalQuantity>
+  <!--Zero or more repetitions:-->
+  <ReferenceDocument UUID="string" Date="2014-10-27T10:44:59" Document_URI="string" DateOfPublication="2013-06-17T19:14:58" Author="string" ISBN="string" Publisher="string" URI="string">
+    <!--1 or more repetitions:-->
+    <Name UUID="string" LanguageCode="string">string</Name>
+    <!--1 or more repetitions:-->
+    <Definition UUID="string" LanguageCode="string">string</Definition>
+    <!--Zero or more repetitions:-->
+    <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
+    <!--Optional:-->
+    <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
+  </ReferenceDocument>
+  <!--Zero or more repetitions:-->
+  <ExternalDictionary DictionaryName="string" DictionaryURI="string" DictionaryUUID="string"/>
+</DT_Library>
