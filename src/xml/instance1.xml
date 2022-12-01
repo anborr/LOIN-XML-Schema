@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loin:LevelOfInformationNeed xmlns:pdt="http://iso.org/2022/ProductDataTemplates"
+ xmlns:loin="http://iso.org/2022/LOIN"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://iso.org/2022/LOIN file:/C:/src/LOIN-XML-Schema/src/xml/EN_17412-3.xsd">
+</loin:LevelOfInformationNeed>

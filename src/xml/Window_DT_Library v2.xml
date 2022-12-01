@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DT_Library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="ba13388f-0253-4595-be2c-66592d4b29eb" xsi:noNamespaceSchemaLocation="EN_ISO_23387.xsd">
+<DT_Library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" UUID="ba13388f-0253-4595-be2c-66592d4b29eb"  xmlns="http://iso.org/2022/ProductDataTemplates/">
 	<LibraryName UUID="c951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="en">My data template library exchange</LibraryName>
 	<LibraryName UUID="d951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="no-NO">Min datamal-bibliotekutveksling</LibraryName>
 	<LibraryName UUID="e951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="de-DE">Austausch meiner Datenvorlagenbibliothek</LibraryName>
