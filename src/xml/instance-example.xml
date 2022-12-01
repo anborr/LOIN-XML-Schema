@@ -2,7 +2,7 @@
 
 <LevelOfInformationNeed UUID="string" name="string">
   <!--Optional:-->
-  <description>Example LOIN Definition using ISO 23387 refrences to PDTs</description>
+  <description>Example LOIN Definition using ISO 23387 references to PDTs</description>
   <!--Optional:-->
   <prerequisites purpose="string" informationDeliveryMilestone="string" sendingActor="string" receivingActor="string"/>
   <!--Zero or more repetitions:-->
