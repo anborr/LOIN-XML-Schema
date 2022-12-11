@@ -10,9 +10,9 @@
     <!--Optional:-->
     <objectType UUID="" Date="2008-09-29T03:49:45" Document_URI="string">
       <!--1 or more repetitions:-->
-      <Name UUID="8b376c76-0861-43dd-bc35-fff3cc2cea2c" LanguageCode="en">Test LOIN for windows</Name>
+      <Name UUID="8b376c76-0861-43dd-bc35-fff3cc2cea2c" LanguageCode="en">Window</Name>
       <!--1 or more repetitions:-->
-      <Definition UUID="08193c09-7fef-42b6-82f2-e3acf0903983" LanguageCode="en">Demonstrating the integration of LOIN definitions with PDT Templates</Definition>
+      <Definition UUID="08193c09-7fef-42b6-82f2-e3acf0903983" LanguageCode="en">Definition of a Window</Definition>
       <!--Zero or more repetitions:-->
     </objectType>
     <!--Optional:-->
