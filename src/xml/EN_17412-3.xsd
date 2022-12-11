@@ -12,9 +12,9 @@
       <xs:documentation>Level of Information Need as defined by EN 17412</xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:complexContent>
-        <xs:extension base="Specification"/>
-      </xs:complexContent>
+      <xs:sequence>
+        <xs:element type="Specification" name="Specification" minOccurs="0" maxOccurs="unbounded"/>  
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
 
@@ -39,17 +39,17 @@
 
   <xs:complexType name="SpecificationPerObjectType">
     <xs:sequence>
-      <xs:element name="ObjectType" minOccurs="0" type="pdt:T_ConstructionObject"/>
+      <xs:element name="ObjectType" minOccurs="1" type="pdt:T_ConstructionObject"/>
       <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
       <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
-      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:T_DataTemplate">
+      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:T_DataTemplate" maxOccurs="unbounded">
       </xs:element>
     </xs:sequence>
     <xs:attribute name="UUID" type="xs:string"/>
   </xs:complexType>
   <xs:complexType name="Documentation">
     <xs:sequence>
-      <xs:element name="RequiredDocument" type="RequiredDocument" minOccurs="0"/>
+      <xs:element name="RequiredDocument" type="RequiredDocument" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
