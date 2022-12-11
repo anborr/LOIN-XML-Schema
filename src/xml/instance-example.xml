@@ -38,9 +38,13 @@
       <ReferenceDocument LinkUUID="string" TargetName="string" TargetUUID="string"/>
       <!--Optional:-->
       <ExternalDictionary LinkUUID="string" TargetName="string" TargetUUID="string"/>
-      <IsDataTemplateFor LinkUUID="string" TargetName="string" TargetUUID="string"/>
-      <!--This refers to Dimensions classification definition defined in Window_DT_Library -->
+
+      <!--Required due to usage of PDT's T_DataTemplate for alphanumericalInformation. It must refer to the same objectType as defined above. -->
+      <IsDataTemplateFor LinkUUID="string" TargetName="Window" TargetUUID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+
+      <!--This refers to Dimensions classification definition defined in Window_DT_Library, thus TargetUUID equals UUID of "Dimensions" -->
       <SetOfProperties LinkUUID="20f434c3-634d-4fcc-ba62-04106efb8eef" TargetName="Dimensions" TargetUUID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+
       <!--This refers to a Fire classification definition defined in Window_DT_Library -->
       <Property TargetName="Fire classification" TargetUUID="e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/>
     </alphanumericalInformation>
