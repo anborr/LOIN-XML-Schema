@@ -8,7 +8,7 @@
   <!--Zero or more repetitions:-->
   <specificationPerObjectType UUID="string">
     <!--Optional:-->
-    <objectType UUID="" Date="2008-09-29T03:49:45" Document_URI="string">
+    <objectType UUID="2c9cf451-6070-42dc-bbc8-a71494be6476" Date="2008-09-29T03:49:45" Document_URI="string">
       <!--1 or more repetitions:-->
       <Name UUID="8b376c76-0861-43dd-bc35-fff3cc2cea2c" LanguageCode="en">Window</Name>
       <!--1 or more repetitions:-->
