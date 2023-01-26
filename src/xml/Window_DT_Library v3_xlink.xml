@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DT_Library xmlns="https://iso.org/2022/ProductDataTemplates" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    URI="ba13388f-0253-4595-be2c-66592d4b29eb" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xsi:noNamespaceSchemaLocation="EN_ISO_23387.xsd">
+    
+  
+   
+    <LibraryName URI="c951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="en">My data template library exchange</LibraryName>
+	<LibraryName URI="d951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="no-NO">Min datamal-bibliotekutveksling</LibraryName>
+	<LibraryName URI="e951daa2-a6e7-4f03-b01b-779106c6f486" LanguageCode="de-DE">Austausch meiner Datenvorlagenbibliothek</LibraryName>
+	
+    <!-- 
+    ############################################################################################################################################
+    #  Languages
+    #############################################################################################################################################
+    -->
+	
+	<Language URI="09ba94d4-87c0-43d6-aca2-37ab27199883" Code="en" Name="English"/>
+	<Language URI="19ba94d4-87c0-43d6-aca2-37ab27199883" Code="no-NO" Name="Norwegian"/>
+	<Language URI="29ba94d4-87c0-43d6-aca2-37ab27199883" Code="de-DE" Name="German"/>
+
+    <!-- 
+    ############################################################################################################################################
+    #  Dimension
+    #############################################################################################################################################
+    -->
+
+	<Dimension UUID="476c3391-b3a7-4c33-a4e3-2b503726f441" L="1" T="0" M="0" Theta="0" N="0" I="0" J="0"/>
+
+    <!-- 
+    ############################################################################################################################################
+    #  Unit centimeter
+    #############################################################################################################################################
+    -->
+
+	<Unit URI="576c3391-b3a7-4c33-a4e3-2b503726f441" Date="2022-05-02T09:21:20+01:00" Symbol="cm" Scale="LINEAR" Base="TEN" Coefficient="100" Offset="0">
+		<Name URI="cb66846a-3746-4fe0-bfe9-bc6028180a52" LanguageCode="en">Centimeter</Name>
+		<Definition URI="4e5b75bb-78fe-4d85-b32f-f42df5090007" LanguageCode="en">Centimeter according to ISO 80000</Definition>
+		<Dimension xlink:title="" xlink:href="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+	</Unit>
+
+    <!-- 
+    ############################################################################################################################################
+    #  Physical quantity : Length
+    #############################################################################################################################################
+    -->
+    
+    <PhysicalQuantity URI="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" Date="2022-05-02T09:21:20+01:00">
+		<Name URI="01f5560e-8281-4b15-ad10-1b63b90e0649" LanguageCode="en">Length</Name>
+		<Definition URI="598ea5b6-0e3d-4316-a394-97c78debdef8" LanguageCode="en">Definition of length physical quantity</Definition>
+		<Dimension xlink:title="" xlink:href="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+    </PhysicalQuantity>
+
+    <!-- 
+    ############################################################################################################################################
+    #  Property : length coming from external dictionary
+    #############################################################################################################################################
+    -->
+
+	<Property URI="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" Date="2022-05-02T09:21:20+01:00">
+		<Name URI="db66846a-3746-4fe0-bfe9-bc6028180a52" LanguageCode="en">Length</Name>
+		<Definition URI="3e5b75bb-78fe-4d85-b32f-f42df5090007" LanguageCode="en">Lengh according to ISO XXX-YYY</Definition>
+		<ExternalDictionary xlink:title="My external dictionary" xlink:href="2bb485a2-928d-4a22-98a7-150b93a7d3f1"/>
+		<Datatype>REAL</Datatype>
+	</Property>
+
+
+    <!-- 
+    ############################################################################################################################################
+    #  Property : Width
+    #############################################################################################################################################
+    -->
+
+	<Property URI="bc175904-b312-4caa-8b8a-5b130c239673" Date="2022-05-02T09:21:20+01:00">
+		<Name URI="db66846b-3746-4fe0-bfe9-bc6028180a52" LanguageCode="en">Width</Name>
+		<Definition URI="3b5b75bb-78fe-4d85-b32f-f42df5090007" LanguageCode="en">Width according to ISO XXX-YYY</Definition>
+		<Datatype>REAL</Datatype>
+		<Unit LinkURI="3e633b70-3f35-453f-844a-dc7ff8555123" xlink:title="cm" xlink:href="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+		<PhysicalQuantity xlink:title="Length" xlink:href="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+		<Boundary BoundaryLimit="MIN" Inclusive="false" BoundaryValue="0"/>
+	</Property>
+
+    
+    <!-- 
+    ############################################################################################################################################
+    #  Property : Fire classification EN 13501-1+A1
+    #############################################################################################################################################
+    -->
+
+	<Property URI="e6adff2a-19cb-4b04-8f07-89f3934bbb6c" Date="2022-05-02T09:21:20+01:00">
+		<Name  URI="fb66846a-3746-4fe0-bfe9-bc6028180a52" LanguageCode="en">Fire classification</Name>
+		<Definition URI="3bc4f4a1-ec3b-46f8-b9f8-5acb4c472486" LanguageCode="en">Fire classification euroclass</Definition>
+      	<ReferenceDocument xlink:title="EN 13501-1:2018" xlink:href="aad6923e-94b9-4626-8dc6-a54d537aab4e"/>
+		<Datatype>STRING</Datatype>
+		<PredefinedValues URI="984178ba-78c5-44a6-a8cb-41543b3ccd3c" LanguageCode="en">
+		  <Values>
+			<ValueItem OrderNo="1" Value="A1" />
+			<ValueItem OrderNo="2" Value="A2" />
+			<ValueItem OrderNo="3" Value="B" />
+			<ValueItem OrderNo="4" Value="C" />
+			<ValueItem OrderNo="5" Value="D" />
+			<ValueItem OrderNo="6" Value="E" />
+			<ValueItem OrderNo="7" Value="F" />
+		  </Values>		
+		</PredefinedValues>
+	</Property>
+
+    <!-- 
+    ############################################################################################################################################
+    #  Construction object : Window
+    #############################################################################################################################################
+    -->
+    	
+	<ConstructionObject URI="2c9cf451-6070-42dc-bbc8-a71494be6476" Date="2022-05-02T09:21:20+01:00">
+			<Name URI="86d4ccdd-cfa1-4e11-821e-56ce6fe1eecf" LanguageCode="en">Window</Name>
+			<Definition URI="fc3d13d8-38a0-4385-96fa-e76a92686d78" LanguageCode="en">Definition of a window</Definition>
+	</ConstructionObject>
+	
+    <!-- 
+    ############################################################################################################################################
+    #  Set of properties  Dimensions
+    #############################################################################################################################################
+    -->
+
+   <SetOfProperties URI="19f434c3-634d-4fcc-ba62-04106efb8eef" Date="2022-05-02T09:21:20+01:00">
+	 <Name URI="4ca1cfed-b6f6-46dc-8fbf-50f4d097c981" LanguageCode="en">Dimensions</Name>
+	 <Definition URI="99906938-eb25-439a-ae4e-a4869c63f6fb" LanguageCode="en">Definition of the dimensions set of properties</Definition>
+	 <Property xlink:title="Width" xlink:href="bc175904-b312-4caa-8b8a-5b130c239673"></Property>
+	 <Property xlink:title="Length" xlink:href="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"></Property>	 
+   </SetOfProperties>
+	
+
+
+    <!-- 
+    ############################################################################################################################################
+    #  Data template for Window
+    #############################################################################################################################################
+    -->
+
+	<DataTemplate URI="2e035990-8bc2-4141-b2ec-8cd0513cdd1f" Date="2022-05-02T09:21:20+01:00">
+		<Name URI="5fc19e7b-0108-490b-8140-34462515b2d4" LanguageCode="en">Data Template for Window</Name>
+		<Definition URI="da175904-b312-4caa-8b8a-5b130c239673" LanguageCode="en">Definition of the data template</Definition>
+		<IsDataTemplateFor LinkURI="3c9cf451-6070-42dc-bbc8-a71494be6476" xlink:title="Window" xlink:href="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+		<SetOfProperties LinkURI="20f434c3-634d-4fcc-ba62-04106efb8eef" xlink:title="Dimensions" xlink:href="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+		<Property xlink:title="Fire classification" xlink:href="e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/>
+	</DataTemplate>
+	
+    <!-- 
+    ############################################################################################################################################
+    #  Reference Document  EN 13501-1+A1
+    #############################################################################################################################################
+    -->
+    <ReferenceDocument URI="aad6923e-94b9-4626-8dc6-a54d537aab4e" Date="2022-05-02T09:21:20+01:00">
+	  <Name URI="cfda6613-35a6-4ace-b657-6320651b5c7c" LanguageCode="en">EN 13501-1:2018 Fire classification of construction products and building elements. Classification using data from reaction to fire tests
+	  </Name>
+	  <Definition URI="0ec4fed1-f202-4c27-97f0-4421fae7c00a" LanguageCode="en">BS EN 13501-1 provides the reaction to the fire classification procedure for all construction products, including products incorporated within building elements with the exception of power, control and communication cables which are covered by EN 13501-6.</Definition>
+    </ReferenceDocument>
+
+    <!-- 
+    ############################################################################################################################################
+    #  use of bSDD links
+    #############################################################################################################################################
+    -->
+    
+    <ExternalDictionary DictionaryName="my external dictionary" URI="http://myexternaldictionary.no/" />        
+
+	
+</DT_Library>

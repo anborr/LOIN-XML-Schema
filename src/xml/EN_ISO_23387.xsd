@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2022 rel. 2 (x64) (http://www.altova.com) by Grand (my company) -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
-	attributeFormDefault="unqualified" vc:minVersion="1.1"
+<xs:schema 
+	
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+	xmlns="https://iso.org/2022/ProductDataTemplates"
+	elementFormDefault="qualified"
 	targetNamespace="https://iso.org/2022/ProductDataTemplates"
-	xmlns="https://iso.org/2022/ProductDataTemplates">
+	
+	
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	>
+	
+	
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd" />
+	
 	<xs:element name="DT_Library">
 		<xs:annotation>
 			<xs:documentation>To be exported as xtdDictionary in ISO 12006-3</xs:documentation>
@@ -30,10 +39,10 @@
 			<xs:selector xpath="*/PredefinedValues"/>
 			<xs:field xpath="@LanguageCode"/>
 		</xs:keyref>
-		<xs:keyref name="CO_Lang_Link" refer="Language_Code">
+	<!--	<xs:keyref name="CO_Lang_Link" refer="Language_Code">
 			<xs:selector xpath="*/Name | */Definition | *"/>
 			<xs:field xpath="@LanguageCode"/>
-		</xs:keyref>
+		</xs:keyref>-->
 		<xs:key name="CO_Key">
 			<xs:selector xpath="ConstructionObject"/>
 			<xs:field xpath="@UUID"/>
@@ -87,7 +96,7 @@
 			<xs:field xpath="@TargetUUID"/>
 		</xs:keyref>
 		<xs:key name="PhysicalQuantity_Key">
-			<xs:selector xpath="PhysicalQuantity"/>
+			<xs:selector xpath="*/PhysicalQuantity"/>
 			<xs:field xpath="@UUID"/>
 		</xs:key>
 		<xs:keyref name="Link_PhysicalQuantity" refer="PhysicalQuantity_Key">
@@ -140,7 +149,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:complexType name="T_Dimension">
-		<xs:attribute name="UUID" type="T_UUID" use="required"/>
+		<xs:attribute name="UUID" type="T_URI" use="required"/>
 		<xs:attribute name="L" type="xs:int" use="required"/>
 		<xs:attribute name="T" type="xs:int" use="required"/>
 		<xs:attribute name="M" type="xs:int" use="required"/>
@@ -190,7 +199,7 @@
 					maxOccurs="unbounded"/>
 			</xs:choice>
 		</xs:sequence>
-		<xs:attribute name="UUID" type="T_UUID" use="required"/>
+		<xs:attribute name="URI" type="T_URI" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="T_DT_Library_Component" abstract="true">
 		<xs:sequence>
@@ -205,28 +214,35 @@
 			<xs:element name="ReferenceDocument" type="T_Link" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="ExternalDictionary" type="T_Link" minOccurs="0"/>
 		</xs:sequence>
-		<xs:attribute name="UUID" type="T_UUID" use="required"/>
+		<xs:attribute name="URI" type="T_URI" use="required"/>
 		<xs:attribute name="Date" type="xs:dateTime" use="required"/>
 		<xs:attribute name="Document_URI" type="xs:string"/>
 	</xs:complexType>
 	<xs:complexType name="T_ExternalDictionary">
 		<xs:attribute name="DictionaryName" type="xs:string" use="required"/>
-		<xs:attribute name="DictionaryURI" type="xs:string"/>
-		<xs:attribute name="DictionaryUUID" type="xs:string" use="optional"/>
+		<xs:attribute name="URI" type="T_URI" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="T_Language">
-		<xs:attribute name="UUID" type="T_UUID" use="required"/>
+		<xs:attribute name="URI" type="T_URI" use="required"/>
 		<xs:attribute name="Code" type="xs:string" use="required"/>
 		<xs:attribute name="Name" type="xs:string" use="required"/>
 	</xs:complexType>
 	<xs:complexType name="T_Link">
-		<xs:attribute name="LinkUUID" type="T_UUID" use="optional">
+		<xs:attribute name="LinkURI" type="T_URI" use="optional">
 			<xs:annotation>
 				<xs:documentation>This is mandatory when wanting to export to IFD in order to ccreate xtdRelationshipToSubject between xtdSubjects</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="TargetName" type="xs:string" use="required"/>
-		<xs:attribute name="TargetUUID" type="T_UUID" use="required"/>
+		<xs:attribute ref="xlink:title" use="required"/>
+		<xs:attribute ref="xlink:href" use="required"/>
+		
+		<!---
+			
+			These should be refeferences to URIs using xlink:href
+			
+		<xs:attribute name="TargetUUID" type="T_URI" use="required"/>
+		-->
+		
 	</xs:complexType>
 	<xs:complexType name="T_PhysicalQuantity">
 		<xs:complexContent>
@@ -253,7 +269,7 @@
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="UUID" type="T_UUID" use="required"/>
+		<xs:attribute name="URI" type="T_URI" use="required"/>
 		<xs:attribute name="LanguageCode" type="xs:string" use="optional"/>
 	</xs:complexType>
 	<xs:complexType name="T_Property">
@@ -286,7 +302,7 @@
 				<xs:attribute name="Author" type="xs:string" use="optional"/>
 				<xs:attribute name="ISBN" type="xs:string" use="optional"/>
 				<xs:attribute name="Publisher" type="xs:string" use="optional"/>
-				<xs:attribute name="URI" type="xs:string" use="optional"/>
+				<xs:attribute ref="xlink:href" use="optional"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -318,7 +334,7 @@
 	<xs:complexType name="T_Text">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute name="UUID" type="T_UUID" use="required"/>
+				<xs:attribute name="URI" type="T_URI" use="required"/>
 				<xs:attribute name="LanguageCode" type="xs:string" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
@@ -363,11 +379,11 @@
 			<xs:enumeration value="LOGARITHMIC"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="T_UUID">
-		<xs:restriction base="xs:string">
-			<xs:pattern
+	<xs:simpleType name="T_URI">
+		<xs:restriction base="xs:anyURI">
+			<!--<xs:pattern
 				value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
-			/>
+			/>-->
 		</xs:restriction>
 	</xs:simpleType>
 </xs:schema>
