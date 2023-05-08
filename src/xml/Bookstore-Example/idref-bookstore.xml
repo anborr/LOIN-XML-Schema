@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+	<book id="123313-321323-32323432">
+		<title lang="en">Everyday Italian</title>
+		<author>Giada De Laurentiis</author>
+		<year>2005</year>
+		<price>30.00</price>
+	</book>
+
+	<book id="3132132-321323-32323434">
+		<title lang="en">Harry Potter</title>
+		<author>J K. Rowling</author>
+		<year>2005</year>
+		<price>29.99</price>
+	</book>
+
+	<book id="646543-321323-32323435">
+		<title lang="en">XQuery Kick Start</title>
+		<author>James McGovern</author>
+		<author>Per Bothner</author>
+		<author>Kurt Cagle</author>
+		<author>James Linn</author>
+		<author>Vaidyanathan Nagarajan</author>
+		<year>2003</year>
+		<price>49.99</price>
+	</book>
+
+	<book id="89778493-321323-32323435">
+		<title lang="en">Learning XML</title>
+		<author>Erik T. Ray</author>
+		<year>2003</year>
+		<price>39.95</price>
+	</book>
+	
+	<cart>
+		<book refid="646543-321323-32323435"/>
+		<book refid="89778493-321323-32323435"/>
+	</cart>
+
+</bookstore>

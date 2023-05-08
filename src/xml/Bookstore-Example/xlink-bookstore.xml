@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cart xmlns:xlink="http://www.w3.org/1999/xlink">
+  <book>
+    <link xlink:type="simple" xlink:href="books.xml#123313-321323-32323432" xlink:show="embed"/>
+  </book>
+  <book>
+    <link xlink:type="simple" xlink:href="books.xml#3132132-321323-32323434" xlink:show="embed"/>
+  </book>
+</cart>
