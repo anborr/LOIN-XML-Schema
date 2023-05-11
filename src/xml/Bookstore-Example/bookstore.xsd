@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="https://www.cencenelec.eu/bookstore" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="https://www.w3.org/XML/2008/06/xlink.xsd"/>
+  <xs:element name="cart" type="book:cartType" xmlns:book="https://www.cencenelec.eu/bookstore"/>
+  <xs:complexType name="linkType">
+    <xs:attribute ref="xlink:href" use="required"/>
+    <xs:attribute ref="xlink:type" fixed="simple"/>
+    <xs:attribute ref="xlink:show" fixed="embed"/>
+    <xs:attribute ref="xlink:actuate" fixed="onLoad"/>
+  </xs:complexType>
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element type="book:linkType" name="link" xmlns:book="https://www.cencenelec.eu/bookstore"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cartType">
+    <xs:sequence>
+      <xs:element type="book:bookType" name="book" maxOccurs="unbounded" minOccurs="0" xmlns:book="https://www.cencenelec.eu/bookstore"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

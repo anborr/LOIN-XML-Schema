@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cart xmlns="https://www.cencenelec.eu/bookstore" xsi:schemaLocation="https://www.cencenelec.eu/bookstore bookstore.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <book>
+    <link xlink:href="books.xml#123313-321323-32323432"/>
+  </book>
+  <book>
+    <link xlink:href="books.xml#3132132-321323-32323434"/>
+  </book>
+</cart>
