@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <books>
-    <book id="123313-321323-32323432">
+    <book id="6cb3e162-f57f-11ed-b67e-0242ac120002">
         <title lang="en">Everyday Italian</title>
         <author>Giada De Laurentiis</author>
         <year>2005</year>
         <price>30.00</price>
     </book>
 
-    <book id="3132132-321323-32323434">
+    <book id="766cbb2a-f57f-11ed-b67e-0242ac120002">
         <title lang="en">Harry Potter</title>
         <author>J K. Rowling</author>
         <year>2005</year>
         <price>29.99</price>
     </book>
 
-    <book id="646543-321323-32323435">
+    <book id="7c3f6638-f57f-11ed-b67e-0242ac120002">
         <title lang="en">XQuery Kick Start</title>
         <author>James McGovern</author>
         <author>Per Bothner</author>
@@ -25,7 +25,7 @@
         <price>49.99</price>
     </book>
 
-    <book id="89778493-321323-32323435">
+    <book id="82bd94a8-f57f-11ed-b67e-0242ac120002">
         <title lang="en">Learning XML</title>
         <author>Erik T. Ray</author>
         <year>2003</year>
