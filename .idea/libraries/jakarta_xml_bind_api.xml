@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jakarta.xml.bind.api" type="repository">
+    <properties maven-id="jakarta.xml.bind:jakarta.xml.bind-api:4.0.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.xml.bind-api-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.activation-api-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

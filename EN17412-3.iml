@@ -5,7 +5,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="corretto-19" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jakarta.xml.bind.api" level="project" />
+    <orderEntry type="library" name="glassfish.jaxb.xjc" level="project" />
+    <orderEntry type="library" name="sun.xml.bind.jaxb.xjc" level="project" />
+    <orderEntry type="library" name="glassfish.jaxb.runtime1" level="project" />
   </component>
 </module>

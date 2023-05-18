@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema elementFormDefault="qualified" targetNamespace="https://www.cencenelec.eu/bookstore" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="https://www.w3.org/XML/2008/06/xlink.xsd"/>
+  <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://www.w3.org/1999/xlink.xsd"/>
   <xs:element name="cart" type="book:cartType" xmlns:book="https://www.cencenelec.eu/bookstore"/>
   <xs:complexType name="linkType">
     <xs:attribute ref="xlink:href" use="required"/>

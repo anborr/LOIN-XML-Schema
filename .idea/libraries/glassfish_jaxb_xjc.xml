@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="glassfish.jaxb.xjc" type="repository">
+    <properties maven-id="org.glassfish.jaxb:jaxb-xjc:4.0.2" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-xjc-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-core-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.xml.bind-api-4.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jakarta.activation-api-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/angus-activation-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/txw2-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/istack-commons-runtime-4.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xsom-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/relaxng-datatype-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/codemodel-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rngom-4.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/dtd-parser-1.5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/istack-commons-tools-4.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

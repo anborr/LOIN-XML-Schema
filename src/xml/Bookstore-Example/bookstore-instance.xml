@@ -2,9 +2,9 @@
 
 <cart xmlns="https://www.cencenelec.eu/bookstore" xsi:schemaLocation="https://www.cencenelec.eu/bookstore bookstore.xsd"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
   <book>
-    <link xlink:href="books.xml#6cb3e162-f57f-11ed-b67e-0242ac120002"/>
+    <link xlink:href="books.xml#ID_6cb3e162-f57f-11ed-b67e-0242ac120002"/>
   </book>
   <book>
-    <link xlink:href="books.xml#766cbb2a-f57f-11ed-b67e-0242ac120002"/>
+    <link xlink:href="books.xml#ID_766cbb2a-f57f-11ed-b67e-0242ac120002"/>
   </book>
 </cart>
