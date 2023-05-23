@@ -6,15 +6,15 @@
   
   <xs:element name="books" type="booksType" />
   
-	<xs:attributeGroup name="simpleLink">
-	  <xs:attribute name="type" type="xs:string" fixed="simple" form="qualified"/>
-	  <xs:attribute ref="xlink:href" use="optional"/>
-	  <xs:attribute ref="xlink:role" use="optional"/>
-	  <xs:attribute ref="xlink:arcrole" use="optional"/>
-	  <xs:attribute ref="xlink:title" use="optional"/>
-	  <xs:attribute ref="xlink:show" use="optional"/>
-	  <xs:attribute ref="xlink:actuate" use="optional"/>
-	</xs:attributeGroup>  
+    <xs:attributeGroup name="simpleLink">
+      <xs:attribute name="type" type="xs:string" fixed="simple" form="qualified"/>
+      <xs:attribute ref="xlink:href" use="optional"/>
+      <xs:attribute ref="xlink:role" use="optional"/>
+      <xs:attribute ref="xlink:arcrole" use="optional"/>
+      <xs:attribute ref="xlink:title" use="optional"/>
+      <xs:attribute ref="xlink:show" use="optional"/>
+      <xs:attribute ref="xlink:actuate" use="optional"/>
+    </xs:attributeGroup>
   
   <!--
   <xs:complexType name="linkType">
@@ -46,7 +46,7 @@
       <xs:element type="xs:string" name="year"/>
       <xs:element type="xs:string" name="price"/>
     </xs:sequence>
-    <!-- TO BE RESOLVED: Not clear how to avoid this id here. -->
+    <!-- TO BE RESOLVED: Not clear how to avoid this id if we provide a link. -->
     <xs:attribute type="xs:ID" name="id" use="required"/>
     <xs:attributeGroup ref="simpleLink"/>
   </xs:complexType>

@@ -18,6 +18,8 @@ public class Generator {
     public void marshal() throws JAXBException, IOException {
         ObjectFactory factory = new ObjectFactory();
 
+        BooksType booklist = new BooksType();
+
         BookType myBook = new BookType();
         myBook.setId("ID_bc30bde4-f590-11ed-b67e-0242ac120002");
         myBook.setPrice("24.55");
@@ -27,8 +29,8 @@ public class Generator {
         myBook.setTitle(myTitle);
         myBook.setYear("2018");
 
-        BooksType booklist = new BooksType();
-        booklist.getBook().add(myBook);;
+
+        booklist.getBook().add(myBook);
 
         JAXBElement<BooksType> element = factory.createBooks(booklist);
 
