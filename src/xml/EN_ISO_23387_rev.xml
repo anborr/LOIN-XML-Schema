@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!-- ABo: Namespaces seem not be correct in schema. DT_Library is in pdt, all other elements not -->
+
 <pdt:DT_Library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="_ba13388f-0253-4595-be2c-66592d4b29eb"  
 xmlns:pdt="https://iso.org/2022/ProductDataTemplates" 
 xsi:schemaLocation="https://iso.org/2022/ProductDataTemplates EN_ISO_23387_rev.xsd" 
@@ -143,9 +145,9 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
 	<DataTemplate ID="_2e035990-8bc2-4141-b2ec-8cd0513cdd1f" Date="2022-05-02T09:21:20+01:00">
 		<Name ID="_5fc19e7b-0108-490b-8140-34462515b2d4" LanguageCode="en">Data Template for Window</Name>
 		<Definition ID="_da175904-b312-4caa-8b8a-5b130c239673" LanguageCode="en">Definition of the data template</Definition>
-		<IsDataTemplateFor xlink:href="2c9cf451-6070-42dc-bbc8-a71494be6476"/> <!-- TargetName="Window"  -->
-		<SetOfProperties xlink:href="19f434c3-634d-4fcc-ba62-04106efb8eef"/> <!--TargetName="Dimensions"-->
-		<Property xlink:href="e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/> <!--TargetName="Fire classification"--> 
+		<IsDataTemplateFor xlink:href="#_2c9cf451-6070-42dc-bbc8-a71494be6476"/> <!-- TargetName="Window"  -->
+		<SetOfProperties xlink:href="#_19f434c3-634d-4fcc-ba62-04106efb8eef"/> <!--TargetName="Dimensions"-->
+		<Property xlink:href="#_e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/> <!--TargetName="Fire classification"-->
 	</DataTemplate>
 	
     <!-- 
