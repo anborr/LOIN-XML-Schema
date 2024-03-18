@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
-    elementFormDefault="qualified"
-    xmlns="http://tempuri.org/XMLSchema.xsd"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xml:lang="en"
+		   elementFormDefault="qualified"
+		   xmlns="http://tempuri.org/XMLSchema.xsd"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xml:lang="en"
 >
 
-    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>   
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
 
 	<xs:annotation>
 		<xs:documentation>
-			
+
 		</xs:documentation>
 	</xs:annotation>
 
@@ -21,21 +21,24 @@
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
-			<xs:choice maxOccurs="unbounded">				
+			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Name" type="multilingualTextType" maxOccurs="unbounded" />
 				<xs:element name="DataTemplate" type="dataTemplateType" maxOccurs="unbounded" />
 				<xs:element name="Property" type="propertyType" maxOccurs="unbounded" />
 				<xs:element name="PhysicalQuantity" type="physicalQuantityType" maxOccurs="unbounded" />
-				<xs:element name="SetOfProperties" type="setOfPropertiesType" maxOccurs="unbounded" />
+				<xs:element name="SetOfProperties" type="groupOfPropertiesType" maxOccurs="unbounded" />
+				<xs:element name="Purpose" type="groupOfPropertiesType" maxOccurs="unbounded" />
+				<xs:element name="IntendedUse" type="groupOfPropertiesType" maxOccurs="unbounded" />
+				<xs:element name="UserDefined" type="groupOfPropertiesType" maxOccurs="unbounded" />
 				<xs:element name="ReferenceDocument" type="referenceDocumentType" maxOccurs="unbounded" />
-				<xs:element name="ConstructionObject" type="constructionObjectType" maxOccurs="unbounded" />
+				<xs:element name="Object" type="objectType" maxOccurs="unbounded" />
 				<xs:element name="Dimension" type="dimensionType" maxOccurs="unbounded" />
 				<xs:element name="Unit" type="unitType" maxOccurs="unbounded" />
 			</xs:choice>
 			<xs:attribute ref="nodeID" />
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:complexType name="multilingualTextType">
 		<xs:annotation>
 			<xs:documentation>
@@ -51,7 +54,7 @@
 	<xs:complexType name="unitType">
 		<xs:annotation>
 			<xs:documentation>
-				
+
 			</xs:documentation>
 		</xs:annotation>
 		<xs:complexContent>
@@ -63,7 +66,7 @@
 					<xs:element name="Base" type="baseType" />
 					<xs:element name="Coefficient" type="xs:double" />
 					<xs:element name="Offset" type="xs:double" />
-				</xs:sequence>				
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -76,9 +79,10 @@
 		<xs:complexContent>
 			<xs:extension base="conceptType">
 				<xs:choice maxOccurs="unbounded">
-					<xs:element name="ConstructionObject" type="referenceType" />
-					<xs:element name="Property" type="referenceType" minOccurs="0" maxOccurs="unbounded" />
-					<xs:element name="SetOfProperties" type="referenceType" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="Object" type="referenceType" minOccurs="1" maxOccurs="1" />
+					<xs:element name="DataTemplate" type="referenceType" maxOccurs="unbounded" />
+					<xs:element name="Property" type="referenceType" minOccurs="1" maxOccurs="unbounded" />
+					<xs:element name="SetOfProperties" type="referenceType" minOccurs="1" maxOccurs="unbounded"/>
 				</xs:choice>
 			</xs:extension>
 		</xs:complexContent>
@@ -135,7 +139,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-    <xs:complexType name="setOfPropertiesType">
+	<xs:complexType name="groupOfPropertiesType">
 		<xs:annotation>
 			<xs:documentation>
 
@@ -150,7 +154,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-    <xs:complexType name="referenceDocumentType">
+	<xs:complexType name="referenceDocumentType">
 		<xs:annotation>
 			<xs:documentation>
 
@@ -168,7 +172,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-    <xs:complexType name="constructionObjectType">
+	<xs:complexType name="objectType">
 		<xs:annotation>
 			<xs:documentation>
 
@@ -177,11 +181,12 @@
 		<xs:complexContent>
 			<xs:extension base="conceptType">
 				<xs:sequence>
+					<xs:element name="Object" type="referenceType" maxOccurs="unbounded" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:complexType name="conceptType" abstract="true">		
+	<xs:complexType name="conceptType" abstract="true">
 		<xs:sequence>
 			<xs:element name="Name" type="multilingualTextType" maxOccurs="unbounded" />
 			<xs:element name="Definition" type="multilingualTextType" minOccurs="0" maxOccurs="unbounded" />
@@ -258,7 +263,7 @@
 					<xs:sequence>
 						<xs:element name="Unit" type="referenceType" minOccurs="0" />
 						<xs:element name="Values" type="valuesType" maxOccurs="unbounded" />
-					</xs:sequence>                       
+					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -282,10 +287,10 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="xs:anySimpleType">
-							<xs:attribute name="order" type="xs:int" use="optional" />                                            
+							<xs:attribute name="order" type="xs:int" use="optional" />
 						</xs:extension>
 					</xs:simpleContent>
-				</xs:complexType>                                
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute ref="xml:lang" use="optional" />
@@ -309,7 +314,7 @@
 		<xs:annotation>
 			<xs:documentation xml:lang="en">
 				The representation of a GUID, generally the id of an element.
-			</xs:documentation>				
+			</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
@@ -320,7 +325,7 @@
 			<xs:documentation xml:lang="en">
 				Defines the ID of a concept
 			</xs:documentation>
-		</xs:annotation>		
+		</xs:annotation>
 	</xs:attribute>
 	<xs:attribute name="resource" type="xs:anyURI">
 		<xs:annotation>
