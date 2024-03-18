@@ -35,7 +35,7 @@
 				<xs:element name="Dimension" type="dimensionType" maxOccurs="unbounded" />
 				<xs:element name="Unit" type="unitType" maxOccurs="unbounded" />
 			</xs:choice>
-			<xs:attribute ref="nodeID" />
+			<xs:attribute name="nodeID" type="guidType"/>
 		</xs:complexType>
 	</xs:element>
 
@@ -181,7 +181,7 @@
 		<xs:complexContent>
 			<xs:extension base="conceptType">
 				<xs:sequence>
-					<xs:element name="Object" type="referenceType" maxOccurs="unbounded" />
+					<xs:element name="Object" type="referenceType" minOccurs="0" maxOccurs="unbounded" /> <!--AB: not sure why we need this-->
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -192,13 +192,13 @@
 			<xs:element name="Definition" type="multilingualTextType" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="ReferenceDocument" type="referenceType" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
-		<xs:attribute ref="about" />
-		<xs:attribute ref="nodeID" use="required" />
+		<xs:attribute name="about" type="xs:anyURI"/>
+		<xs:attribute name="nodeID" use="required" type="guidType"/>
 		<xs:attribute name="date" type="xs:dateTime" use="required" />
 	</xs:complexType>
 	<xs:complexType name="referenceType">
-		<xs:attribute ref="resource" />
-		<xs:attribute ref="nodeID" />
+		<xs:attribute name="resource" type="xs:anyURI"/>
+		<xs:attribute name="nodeID" type="guidType" />
 	</xs:complexType>
 	<xs:complexType name="datatypeType">
 		<xs:sequence>
