@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--xmlns_pdt must later be replaced by final namespace of ISO 23887 -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   targetNamespace="https://iso.org/2022/LOIN" xmlns="https://iso.org/2022/LOIN"
-  xmlns:pdt="https://iso.org/2022/ProductDataTemplates"
+  xmlns:pdt="http://tempuri.org/XMLSchema.xsd"
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
   attributeFormDefault="unqualified" vc:minVersion="1.1">
 
-  <xs:import namespace="https://iso.org/2022/ProductDataTemplates" schemaLocation="EN_ISO_23387.xsd"
-    id="pdt"/>
+  <xs:import namespace="http://tempuri.org/XMLSchema.xsd" schemaLocation="ISO-23887.xsd"/>
+
   <xs:element name="LevelOfInformationNeed">
     <xs:annotation>
       <xs:documentation>Level of Information Need as defined by EN 17412</xs:documentation>
@@ -39,10 +40,10 @@
 
   <xs:complexType name="SpecificationPerObjectType">
     <xs:sequence>
-      <xs:element name="ObjectType" minOccurs="1" type="pdt:T_ConstructionObject"/>
+      <xs:element name="ObjectType" minOccurs="1" type="pdt:objectType"/>
       <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
       <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
-      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:T_DataTemplate" maxOccurs="unbounded">
+      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:dataTemplateType" maxOccurs="unbounded">
       </xs:element>
     </xs:sequence>
     <xs:attribute name="UUID" type="xs:string"/>
