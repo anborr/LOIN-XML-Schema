@@ -111,6 +111,12 @@ class ConceptType:
     class Meta:
         name = "conceptType"
 
+    date: XmlDateTime = field(
+        metadata={
+            "type": "Attribute",
+            "required": True,
+        }
+    )
     name: List[MultilingualTextType] = field(
         default_factory=list,
         metadata={
@@ -149,13 +155,6 @@ class ConceptType:
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
-        }
-    )
-    date: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "required": True,
         }
     )
 
