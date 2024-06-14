@@ -3,6 +3,7 @@ from enum import Enum
 from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from loin.xml import LangValue
+from loin.utils import new_uuid
 
 __NAMESPACE__ = "http://tempuri.org/XMLSchema.xsd"
 
@@ -143,7 +144,7 @@ class ConceptType:
         }
     )
     node_id: Optional[str] = field(
-        default=None,
+        default_factory=new_uuid,
         metadata={
             "name": "nodeID",
             "type": "Attribute",
