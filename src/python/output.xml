@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Container>
     <Loin>
-        <Specification name="Bridge_Handover_to_Client">
+        <Specification UUID="3f54f2bf-efb0-4a24-bfa5-43da577d7969" name="Bridge_Handover_to_Client">
             <Description>LOIN for Bridge data at handover to client</Description>
-            <SpecificationPerObjectType UUID="10108f20-34b2-4996-aa7d-5ec9ba182234">
-                <ObjectType nodeID="3b7802f6-b9a2-4062-ab23-69fa92c4984f">
-                    <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd">Wing Wall</ns0:Name>
+            <SpecificationPerObjectType UUID="317aab53-1538-4e0d-a702-233c1be1282f">
+                <ObjectType nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee" date="2024-06-14T10:17:03">
+                    <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Wing Wall</ns0:Name>
+                    <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="de">Flügelmauer</ns0:Name>
                 </ObjectType>
-                <AlphanumericalInformation>
-                    <ns0:Object xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="3b7802f6-b9a2-4062-ab23-69fa92c4984f"/>
-                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616"/>
-                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="c4a14d69-1ad7-4e66-bacc-7985e21493ba"/>
+                <AlphanumericalInformation nodeID="7687cb22-d98a-4d50-b2e8-0ec7f8ca6497" date="2024-06-14T10:17:03">
+                    <ns0:Object xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee"/>
+                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="cd029979-b8e5-492a-bb18-ff42cae17ecc"/>
+                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="1bd4e74a-a7a8-4bfd-9bd2-a291a19b1324"/>
                 </AlphanumericalInformation>
             </SpecificationPerObjectType>
         </Specification>
     </Loin>
-    <Object nodeID="3b7802f6-b9a2-4062-ab23-69fa92c4984f">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd">Wing Wall</ns0:Name>
+    <Object nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee" date="2024-06-14T10:17:03">
+        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Wing Wall</ns0:Name>
+        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="de">Flügelmauer</ns0:Name>
     </Object>
-    <Unit nodeID="ebdfe50c-474a-482e-9bd6-db93bcaac3d1">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd">Centimeter</ns0:Name>
-        <ns0:Definition xmlns:ns0="http://tempuri.org/XMLSchema.xsd">Centimeter according to ISO 80000</ns0:Definition>
+    <Unit nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6" date="2024-06-14T10:17:03">
+        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter</ns0:Name>
+        <ns0:Definition xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter according to ISO 80000</ns0:Definition>
+        <ns0:Symbol xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">cm</ns0:Symbol>
         <ns0:Scale xmlns:ns0="http://tempuri.org/XMLSchema.xsd">LINEAR</ns0:Scale>
         <ns0:Base xmlns:ns0="http://tempuri.org/XMLSchema.xsd">TEN</ns0:Base>
         <ns0:Coefficient xmlns:ns0="http://tempuri.org/XMLSchema.xsd">100</ns0:Coefficient>
         <ns0:Offset xmlns:ns0="http://tempuri.org/XMLSchema.xsd">0</ns0:Offset>
     </Unit>
-    <Property nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd">width</ns0:Name>
-        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd">REAL</ns0:DataType>
-        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="ebdfe50c-474a-482e-9bd6-db93bcaac3d1"/>
+    <Property nodeID="cd029979-b8e5-492a-bb18-ff42cae17ecc" date="2024-06-14T10:17:03">
+        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Width</ns0:Name>
+        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
+        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6"/>
     </Property>
-    <Property nodeID="c4a14d69-1ad7-4e66-bacc-7985e21493ba">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd">length</ns0:Name>
-        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd">REAL</ns0:DataType>
-        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="ebdfe50c-474a-482e-9bd6-db93bcaac3d1"/>
+    <Property nodeID="1bd4e74a-a7a8-4bfd-9bd2-a291a19b1324" date="2024-06-14T10:17:03">
+        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Length</ns0:Name>
+        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
+        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6"/>
     </Property>
 </Container>
