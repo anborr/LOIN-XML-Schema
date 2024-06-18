@@ -143,7 +143,7 @@ class ConceptType:
             "type": "Attribute",
         }
     )
-    node_id: Optional[str] = field(
+    node_id: str = field(
         default_factory=new_uuid,
         metadata={
             "name": "nodeID",
