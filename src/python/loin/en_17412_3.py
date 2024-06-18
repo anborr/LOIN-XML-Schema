@@ -5,6 +5,7 @@ from loin.iso_23887 import (
     DataTemplateType,
     ObjectType,
 )
+from loin.utils import new_uuid
 
 __NAMESPACE__ = "https://iso.org/2022/LOIN"
 
@@ -188,7 +189,7 @@ class SpecificationPerObjectType:
         }
     )
     uuid: Optional[str] = field(
-        default=None,
+        default_factory=new_uuid,
         metadata={
             "name": "UUID",
             "type": "Attribute",
@@ -224,7 +225,7 @@ class Specification:
         }
     )
     uuid: Optional[str] = field(
-        default=None,
+        default_factory=new_uuid,
         metadata={
             "name": "UUID",
             "type": "Attribute",
