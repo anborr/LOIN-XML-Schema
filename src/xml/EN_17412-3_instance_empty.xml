@@ -1,0 +1,57 @@
+<loin:LevelOfInformationNeed xmlns:loin="https://iso.org/2022/LOIN" xmlns:xs="http://tempuri.org/XMLSchema.xsd">
+  <!--Zero or more repetitions:-->
+  <Specification UUID="string" name="string">
+    <!--Optional:-->
+    <Description>string</Description>
+    <!--Optional:-->
+    <Prerequisites purpose="string" informationDeliveryMilestone="string" sendingActor="string" receivingActor="string"/>
+    <!--Zero or more repetitions:-->
+    <SpecificationPerObjectType UUID="string">
+      <ObjectType about="http://www.company.org/cum/sonoras" nodeID="eced5812-5929-435f-8a20-7eda5946dffe" date="2004-02-14T19:44:14">
+        <!--1 or more repetitions:-->
+        <xs:Name xml:lang="string">string</xs:Name>
+        <!--Zero or more repetitions:-->
+        <xs:Definition xml:lang="string">string</xs:Definition>
+        <!--Zero or more repetitions:-->
+        <xs:ReferenceDocument resource="http://www.your.org/per/turbine" nodeID="c7b8e29c-e77b-4e67-8a2f-c7d44df3c58e"/>
+        <!--Zero or more repetitions:-->
+        <xs:Object resource="http://www.test.org/nimborum/fremunt" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
+      </ObjectType>
+      <!--Optional:-->
+      <Documentation>
+        <!--Zero or more repetitions:-->
+        <RequiredDocument type="string" purpose="string" content="string"/>
+      </Documentation>
+      <!--Optional:-->
+      <GeometricalInformation>
+        <!--Optional:-->
+        <Detail>L5</Detail>
+        <!--Optional:-->
+        <Dimensionality>D3</Dimensionality>
+        <!--Optional:-->
+        <Location>Relative</Location>
+        <!--Optional:-->
+        <Appearance>Textures</Appearance>
+        <!--Optional:-->
+        <ParametricBehaviour>ParametricGeometry</ParametricBehaviour>
+      </GeometricalInformation>
+      <!--Zero or more repetitions:-->
+      <AlphanumericalInformation about="http://www.my.edu/flammato/speluncis" nodeID="6996e939-3745-4586-8c41-a0e7d845e04c" date="2018-12-28T20:51:14+01:00">
+        <!--1 or more repetitions:-->
+        <xs:Name xml:lang="string">string</xs:Name>
+        <!--Zero or more repetitions:-->
+        <xs:Definition xml:lang="string">string</xs:Definition>
+        <!--Zero or more repetitions:-->
+        <xs:ReferenceDocument resource="http://www.corp.gov/hoc/rapidum" nodeID="c61e5d90-ce62-4bde-8299-a003f7522a52"/>
+        <!--You have a CHOICE of the next 4 items at this level-->
+        <xs:Object resource="http://www.any.gov/speluncis/circum" nodeID="ffc15d3e-7bdf-4d75-932b-71c410e69da1"/>
+        <!--1 or more repetitions:-->
+        <xs:DataTemplate resource="http://www.sample.com/praeterea/arce" nodeID="ce2f13f7-8105-492d-b066-883d75d9cd0d"/>
+        <!--1 or more repetitions:-->
+        <xs:Property resource="http://www.corp.org/imperio/certo" nodeID="958ad5d4-b14e-4ddc-aa05-88d8293d8e71"/>
+        <!--1 or more repetitions:-->
+        <xs:SetOfProperties resource="http://www.test.com/ac/feta" nodeID="9cf07494-8f28-46b0-8322-c8656ee7a32f"/>
+      </AlphanumericalInformation>
+    </SpecificationPerObjectType>
+  </Specification>
+</loin:LevelOfInformationNeed>

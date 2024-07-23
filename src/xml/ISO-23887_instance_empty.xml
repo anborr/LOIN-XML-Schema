@@ -1,0 +1,185 @@
+<xs:Library xmlns:xs="http://tempuri.org/XMLSchema.xsd" nodeID="string">
+  <!--You have a CHOICE of the next 12 items at this level-->
+  <!--1 or more repetitions:-->
+  <xs:Name xml:lang="string">string</xs:Name>
+  <!--1 or more repetitions:-->
+  <xs:DataTemplate about="http://www.company.org/cum/sonoras" nodeID="string" date="2004-02-14T19:44:14">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.your.org/per/turbine" nodeID="string"/>
+    <!--You have a CHOICE of the next 4 items at this level-->
+    <xs:Object resource="http://www.test.org/nimborum/fremunt" nodeID="string"/>
+    <!--1 or more repetitions:-->
+    <xs:DataTemplate resource="http://www.my.com/profundum/sceptra" nodeID="string"/>
+    <!--1 or more repetitions:-->
+    <xs:Property resource="http://www.test.com/iovis/flammato" nodeID="string"/>
+    <!--1 or more repetitions:-->
+    <xs:SetOfProperties resource="http://www.sample.com/bella/nubibus" nodeID="string"/>
+  </xs:DataTemplate>
+  <!--1 or more repetitions:-->
+  <xs:Property about="http://www.corp.gov/hoc/rapidum" nodeID="string" date="2000-09-14T10:07:34">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.company.org/coniunx/praeterea" nodeID="string"/>
+    <xs:DataType name="DATETIME">
+      <!--Optional:-->
+      <xs:MinInclusive value="anySimpleType"/>
+      <!--Optional:-->
+      <xs:MaxInclusive value="anySimpleType"/>
+      <!--Optional:-->
+      <xs:MinExclusive value="anySimpleType"/>
+      <!--Optional:-->
+      <xs:MaxExclusive value="anySimpleType"/>
+      <!--Optional:-->
+      <xs:Pattern value="string"/>
+      <!--Optional:-->
+      <xs:Enumeration>
+        <!--Optional:-->
+        <xs:Unit resource="http://www.corp.org/imperio/certo" nodeID="string"/>
+        <!--1 or more repetitions:-->
+        <xs:Values xml:lang="string">
+          <!--1 or more repetitions:-->
+          <xs:Value order="3">anything</xs:Value>
+        </xs:Values>
+      </xs:Enumeration>
+    </xs:DataType>
+    <!--Optional:-->
+    <xs:Symbol>string</xs:Symbol>
+    <!--Zero or more repetitions:-->
+    <xs:Unit resource="http://www.test.com/ac/feta" nodeID="string"/>
+    <!--Optional:-->
+    <xs:PhysicalQuantity resource="http://www.test.org/pectore/talia" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:Property resource="http://www.corp.edu/annos/sciret" nodeID="string"/>
+  </xs:Property>
+  <!--1 or more repetitions:-->
+  <xs:PhysicalQuantity about="http://www.corp.com/rates/bella" nodeID="string" date="2000-08-23T02:34:44">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.sample.org/ac/et" nodeID="string"/>
+    <xs:Dimensions resource="http://www.sample.org/infixit/ventos" nodeID="string"/>
+  </xs:PhysicalQuantity>
+  <!--1 or more repetitions:-->
+  <xs:SetOfProperties about="http://www.corp.org/montis/rapidum" nodeID="string" date="2007-09-09T04:38:42">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.sample.com/in/soror" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:Property resource="http://www.my.edu/coniunx/adorat" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:SetOfProperties resource="http://www.any.com/frenat/aris" nodeID="string"/>
+  </xs:SetOfProperties>
+  <!--1 or more repetitions:-->
+  <xs:Purpose about="http://www.my.com/mollitque/premere" nodeID="string" date="2013-07-07T10:43:40+02:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.company.org/nimborum/circum" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:Property resource="http://www.your.org/flammato/aris" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:SetOfProperties resource="http://www.company.org/tenens/incedo" nodeID="string"/>
+  </xs:Purpose>
+  <!--1 or more repetitions:-->
+  <xs:IntendedUse about="http://www.test.org/iras/acuto" nodeID="string" date="2013-11-24T20:09:11+01:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.my.com/profundum/atris" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:Property resource="http://www.any.com/magno/animos" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:SetOfProperties resource="http://www.test.org/verrantque/patriam" nodeID="string"/>
+  </xs:IntendedUse>
+  <!--1 or more repetitions:-->
+  <xs:UserDefined about="http://www.my.edu/dare/laxas" nodeID="string" date="2010-06-26T21:57:51+02:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.test.org/murmure/coniunx" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:Property resource="http://www.test.org/rapidi/turbine" nodeID="string"/>
+    <!--Zero or more repetitions:-->
+    <xs:SetOfProperties resource="http://www.my.org/sciret/aequora" nodeID="string"/>
+  </xs:UserDefined>
+  <!--1 or more repetitions:-->
+  <xs:ReferenceDocument about="http://www.my.org/ipsa/et" nodeID="string" date="2002-12-04T04:53:14+01:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.company.gov/ego/ni" nodeID="string"/>
+    <!--Optional:-->
+    <xs:DateOfPublication>2007-10-06T06:47:44</xs:DateOfPublication>
+    <!--Optional:-->
+    <xs:Author>string</xs:Author>
+    <!--Optional:-->
+    <xs:ISBN>string</xs:ISBN>
+    <!--Optional:-->
+    <xs:Publisher>string</xs:Publisher>
+    <!--Optional:-->
+    <xs:URI>string</xs:URI>
+  </xs:ReferenceDocument>
+  <!--1 or more repetitions:-->
+  <xs:Object about="http://www.any.org/insuper/molemque" nodeID="string" date="2006-02-20T08:41:23+01:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.your.edu/altos/iunonis" nodeID="string"/>
+    <!--1 or more repetitions:-->
+    <xs:Object resource="http://www.sample.org/hic/iovisque" nodeID="string"/>
+  </xs:Object>
+  <!--1 or more repetitions:-->
+  <xs:Dimension about="http://www.test.org/carcere/imposuit" nodeID="string" date="2000-06-26T08:41:48+02:00">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.sample.org/ipsa/numen" nodeID="string"/>
+    <xs:DimensionExponentForAmountOfSubstance>3</xs:DimensionExponentForAmountOfSubstance>
+    <xs:DimensionExponentForElectricCurrent>3</xs:DimensionExponentForElectricCurrent>
+    <xs:DimensionExponentForLength>3</xs:DimensionExponentForLength>
+    <xs:DimensionExponentForLuminousIntensity>3</xs:DimensionExponentForLuminousIntensity>
+    <xs:DimensionExponentForMass>3</xs:DimensionExponentForMass>
+    <xs:DimensionExponentForThermodynamicTemperature>3</xs:DimensionExponentForThermodynamicTemperature>
+    <xs:DimensionExponentForTime>3</xs:DimensionExponentForTime>
+  </xs:Dimension>
+  <!--1 or more repetitions:-->
+  <xs:Unit about="http://www.your.org/maria/et" nodeID="string" date="2000-01-03T06:51:31">
+    <!--1 or more repetitions:-->
+    <xs:Name xml:lang="string">string</xs:Name>
+    <!--Zero or more repetitions:-->
+    <xs:Definition xml:lang="string">string</xs:Definition>
+    <!--Zero or more repetitions:-->
+    <xs:ReferenceDocument resource="http://www.sample.com/iaculata/montis" nodeID="string"/>
+    <!--1 or more repetitions:-->
+    <xs:Symbol xml:lang="string">string</xs:Symbol>
+    <xs:Dimension resource="http://www.company.com/premere/premit" nodeID="string"/>
+    <xs:Scale>LOGARITHMIC</xs:Scale>
+    <xs:Base>PI</xs:Base>
+    <xs:Coefficient>1.051732E7</xs:Coefficient>
+    <xs:Offset>1.051732E7</xs:Offset>
+  </xs:Unit>
+</xs:Library>

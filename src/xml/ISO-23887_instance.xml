@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dt:Library xmlns:dt="http://tempuri.org/XMLSchema.xsd" nodeID="ba13388f-0253-4595-be2c-66592d4b29eb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/XMLSchema.xsd ISO-23887.xsd">
+	<dt:Name xml:lang="en">My data template library exchange</dt:Name>
+	<dt:Name xml:lang="no">Min datamal-bibliotekutveksling</dt:Name>
+	<dt:Name xml:lang="de">Austausch meiner Datenvorlagenbibliothek</dt:Name>
+	<dt:Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441" date="2022-05-02T09:21:20+01:00" >
+		<dt:Name xml:lang="en">Length Dimensions</dt:Name>
+		<dt:DimensionExponentForAmountOfSubstance>0</dt:DimensionExponentForAmountOfSubstance>
+		<dt:DimensionExponentForElectricCurrent>0</dt:DimensionExponentForElectricCurrent>
+		<dt:DimensionExponentForLength>1</dt:DimensionExponentForLength>
+		<dt:DimensionExponentForLuminousIntensity>0</dt:DimensionExponentForLuminousIntensity>
+		<dt:DimensionExponentForMass>0</dt:DimensionExponentForMass>
+		<dt:DimensionExponentForThermodynamicTemperature>0</dt:DimensionExponentForThermodynamicTemperature>
+		<dt:DimensionExponentForTime>0</dt:DimensionExponentForTime>
+	</dt:Dimension>
+	<dt:Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Centimeter</dt:Name>
+		<dt:Definition xml:lang="en">Centimeter according to ISO 80000</dt:Definition>
+		<dt:Symbol>cm</dt:Symbol>		
+		<dt:Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+		<dt:Scale>LINEAR</dt:Scale>
+		<dt:Base>TEN</dt:Base>
+		<dt:Coefficient>100</dt:Coefficient>
+		<dt:Offset>0</dt:Offset>
+	</dt:Unit>
+	<dt:PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Length</dt:Name>
+		<dt:Definition xml:lang="en">Definition of length physical quantity</dt:Definition>
+		<dt:Dimensions nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+	</dt:PhysicalQuantity>
+	<dt:Property nodeID="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Length</dt:Name>
+		<dt:Definition xml:lang="en">Length according to ISO XXX-YYY</dt:Definition>
+		<dt:DataType name="REAL"/>
+		<dt:Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+		<dt:PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+	</dt:Property>
+    <dt:Property nodeID="75cceb1c-1c7a-44aa-8a75-c3a953e9068b" about="https://datadictionay1.org/75cceb1c-1c7a-44aa-8a75-c3a953e9068b" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Length</dt:Name>
+		<dt:Definition xml:lang="en">Length according to ISO XXX-YYY</dt:Definition>
+		<dt:DataType name="REAL"/>
+		<dt:Unit resource="https://datadictionary2.org/cm" />
+		<dt:PhysicalQuantity resource="https://datadictionary3.org/length" />
+	</dt:Property>
+	<dt:Property nodeID="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Width</dt:Name>
+		<dt:Definition xml:lang="en">Width according to ISO XXX-YYY</dt:Definition>
+		<dt:DataType name="REAL">
+			<dt:MinExclusive value="0"/>
+		</dt:DataType>
+		<dt:Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+		<dt:PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+	</dt:Property>
+	<dt:Property nodeID="e6adff2a-19cb-4b04-8f07-89f3934bbb6c" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Fire classification</dt:Name>
+		<dt:Definition xml:lang="en">Fire classification euroclass</dt:Definition>
+		<dt:ReferenceDocument nodeID="aad6923e-94b9-4626-8dc6-a54d537aab4e"/>
+		<dt:DataType name="STRING">
+			<dt:Enumeration>
+				<dt:Values xml:lang="en">
+					<dt:Value order="1">A1</dt:Value>
+					<dt:Value order="2">A2</dt:Value>
+					<dt:Value order="3">B</dt:Value>
+					<dt:Value order="4">C</dt:Value>
+					<dt:Value order="5">D</dt:Value>
+					<dt:Value order="6">E</dt:Value>
+					<dt:Value order="7">F</dt:Value>
+				</dt:Values>
+			</dt:Enumeration>
+		</dt:DataType>
+	</dt:Property>
+	<dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Window</dt:Name>
+		<dt:Definition xml:lang="en">Definition of a window</dt:Definition>
+	</dt:Object>
+	<dt:SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Dimensions</dt:Name>
+		<dt:Definition xml:lang="en">Definition of the dimensions set of properties</dt:Definition>
+		<dt:Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673"/>
+		<dt:Property nodeID="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+	</dt:SetOfProperties>
+	<dt:DataTemplate nodeID="2e035990-8bc2-4141-b2ec-8cd0513cdd1f" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">Data Template for Window</dt:Name>
+		<dt:Definition xml:lang="en">Definition of the data template</dt:Definition>
+		<dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+		<dt:SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+		<dt:Property nodeID="e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/>
+	</dt:DataTemplate>
+	<dt:ReferenceDocument nodeID="aad6923e-94b9-4626-8dc6-a54d537aab4e" date="2022-05-02T09:21:20+01:00">
+		<dt:Name xml:lang="en">EN 13501-1:2018 Fire classification of construction products and building elements. Classification using data from reaction to fire tests</dt:Name>
+		<dt:Definition xml:lang="en">EN 13501-1 provides the reaction to the fire classification procedure for all construction products, including products incorporated within building elements with the exception of power, control and communication cables which are covered by EN 13501-6.</dt:Definition>
+	</dt:ReferenceDocument>
+</dt:Library>

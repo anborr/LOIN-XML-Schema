@@ -1,0 +1,109 @@
+<loin:LevelOfInformationNeed xmlns:loin="https://iso.org/2024/LOIN" xmlns:dt="http://tempuri.org/XMLSchema.xsd">
+  <!--Zero or more repetitions:-->
+  <Specification nodeID="97c5a8ae-7807-40c5-9872-7244274373b6" name="Bridge Handover to Client">
+    <!--Optional:-->
+    <Description>Defines the requirements for bridge models when handed over to the client.</Description>
+    <!--Optional:-->
+    <Prerequisites purpose="Operation and Maintenance" informationDeliveryMilestone="Handover" sendingActor="Contractor" receivingActor="Client"/>
+    <!--Zero or more repetitions:-->
+
+    <SpecificationPerObjectType about="http://www.company.org/cum/sonoras" nodeID="6416a407-4de9-4b33-9dfa-0cc04c0825f1" date="2004-02-14T19:44:14">
+
+      <dt:Name xml:lang="en">Specification for Wing Wall</dt:Name>
+      <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
+      <dt:ReferenceDocument resource="https://identifier.buildingsmart.org/uri/nbs/uniclass2015/1/class/Ss_20_50_10_95" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
+
+      <!--nodeId provides a reference to content the defined below -->
+      <dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+      <!--nodeId provides a reference to content the defined below -->
+      <dt:SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+
+      <!--Optional:-->
+      <Documentation nodeID="2bb0f705-a43c-4adf-85ae-3c2f73ea40b7">
+        <!--Zero or more repetitions:-->
+        <RequiredDocument type="Technical Drawing" purpose="Archive" content="Horizontal Projection"/>
+      </Documentation>
+
+      <!--Optional:-->
+      <GeometricalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
+        <!--Optional:-->
+        <Detail>L4</Detail>
+        <!--Optional:-->
+        <Dimensionality>D0</Dimensionality>
+        <!--Optional:-->
+        <Location>Relative</Location>
+        <!--Optional:-->
+        <Appearance>Textures</Appearance>
+        <!--Optional:-->
+        <ParametricBehaviour>ConstructiveGeometry</ParametricBehaviour>
+      </GeometricalInformation>
+    </SpecificationPerObjectType>
+  </Specification>
+
+  <AlphanumericalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
+    <!--Should be ObjectType. Should be exactly 1. -->
+    <Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Wing Wall</dt:Name>
+      <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
+    </Object>
+
+    <!--Zero or more repetitions:-->
+    <Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673" about="https://datadictionay1.org/75cceb1c-1c7a-44aa-8a75-c3a953e9068b" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Length</dt:Name>
+      <dt:Definition xml:lang="en">Length according to ISO XXX-YYY</dt:Definition>
+      <dt:DataType name="REAL"/>
+      <dt:Unit resource="https://datadictionary2.org/cm" />
+      <dt:PhysicalQuantity resource="https://datadictionary3.org/length" />
+    </Property>
+
+    <Property nodeID="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Width</dt:Name>
+      <dt:Definition xml:lang="en">Width according to ISO XXX-YYY</dt:Definition>
+      <dt:DataType name="REAL">
+        <dt:MinExclusive value="0"/>
+      </dt:DataType>
+      <dt:Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+      <dt:PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+    </Property>
+
+    <!--Zero or more repetitions:-->
+    <PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Length</dt:Name>
+      <dt:Definition xml:lang="en">Definition of length physical quantity</dt:Definition>
+      <dt:Dimensions nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+    </PhysicalQuantity>
+
+    <!--Zero or more repetitions:-->
+    <SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Dimensions</dt:Name>
+      <dt:Definition xml:lang="en">Definition of the dimensions set of properties</dt:Definition>
+      <dt:Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673"/>
+      <dt:Property nodeID="b0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+    </SetOfProperties>
+
+
+    <!--Zero or more repetitions:-->
+    <Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441" date="2022-05-02T09:21:20+01:00" >
+      <dt:Name xml:lang="en">Length Dimensions</dt:Name>
+      <dt:DimensionExponentForAmountOfSubstance>0</dt:DimensionExponentForAmountOfSubstance>
+      <dt:DimensionExponentForElectricCurrent>0</dt:DimensionExponentForElectricCurrent>
+      <dt:DimensionExponentForLength>1</dt:DimensionExponentForLength>
+      <dt:DimensionExponentForLuminousIntensity>0</dt:DimensionExponentForLuminousIntensity>
+      <dt:DimensionExponentForMass>0</dt:DimensionExponentForMass>
+      <dt:DimensionExponentForThermodynamicTemperature>0</dt:DimensionExponentForThermodynamicTemperature>
+      <dt:DimensionExponentForTime>0</dt:DimensionExponentForTime>
+    </Dimension>
+
+    <!--Zero or more repetitions:-->
+    <Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441" date="2022-05-02T09:21:20+01:00">
+      <dt:Name xml:lang="en">Centimeter</dt:Name>
+      <dt:Definition xml:lang="en">Centimeter according to ISO 80000</dt:Definition>
+      <dt:Symbol>cm</dt:Symbol>
+      <dt:Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+      <dt:Scale>LINEAR</dt:Scale>
+      <dt:Base>TEN</dt:Base>
+      <dt:Coefficient>100</dt:Coefficient>
+      <dt:Offset>0</dt:Offset>
+    </Unit>
+  </AlphanumericalInformation>
+</loin:LevelOfInformationNeed>

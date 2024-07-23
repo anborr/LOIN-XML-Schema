@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--xmlns_pdt must later be replaced by final namespace of ISO 23887 -->
 <xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  targetNamespace="https://iso.org/2022/LOIN" xmlns="https://iso.org/2022/LOIN"
+  targetNamespace="https://iso.org/2024/LOIN" xmlns="https://iso.org/2024/LOIN"
   xmlns:pdt="http://tempuri.org/XMLSchema.xsd"
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
   attributeFormDefault="unqualified" vc:minVersion="1.1">
@@ -14,7 +14,26 @@
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
-        <xs:element type="Specification" name="Specification" minOccurs="0" maxOccurs="unbounded"/>  
+        <xs:element type="Specification" name="Specification" minOccurs="0" maxOccurs="unbounded"/>
+
+        <!-- AB: If pdt:Library would be a type we could reuse it here. In the current form, we repeat definitions. -->
+        <xs:element name="AlphanumericalInformation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Object" type="pdt:objectType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Property" type="pdt:propertyType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="PhysicalQuantity" type="pdt:physicalQuantityType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="SetOfProperties" type="pdt:groupOfPropertiesType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Purpose" type="pdt:groupOfPropertiesType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="IntendedUse" type="pdt:groupOfPropertiesType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="UserDefined" type="pdt:groupOfPropertiesType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="ReferenceDocument" type="pdt:referenceDocumentType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Dimension" type="pdt:dimensionType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Unit" type="pdt:unitType" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="nodeID" type="pdt:guidType"/>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -26,12 +45,12 @@
       <xs:element name="SpecificationPerObjectType" type="SpecificationPerObjectType"
         nillable="true" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
-    <xs:attribute name="UUID" type="xs:string"/>
+    <xs:attribute name="nodeID" type="pdt:guidType" />
     <xs:attribute name="name" type="xs:string"/>
   </xs:complexType>
 
   <xs:complexType name="Prerequisites">
-    <xs:sequence/>
+    <xs:attribute name="nodeID" type="pdt:guidType" />
     <xs:attribute name="purpose" type="xs:string"/>
     <xs:attribute name="informationDeliveryMilestone" type="xs:string"/>
     <xs:attribute name="sendingActor" type="xs:string"/>
@@ -39,19 +58,21 @@
   </xs:complexType>
 
   <xs:complexType name="SpecificationPerObjectType">
-    <xs:sequence>
-      <xs:element name="ObjectType" minOccurs="1" type="pdt:objectType"/>
-      <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
-      <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
-      <xs:element name="AlphanumericalInformation" minOccurs="0" type="pdt:dataTemplateType" maxOccurs="unbounded">
-      </xs:element>
-    </xs:sequence>
-    <xs:attribute name="UUID" type="xs:string"/>
+    <xs:complexContent>
+      <xs:extension base="pdt:dataTemplateType">
+        <xs:sequence>
+            <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
+          <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
+
   <xs:complexType name="Documentation">
     <xs:sequence>
       <xs:element name="RequiredDocument" type="RequiredDocument" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
+    <xs:attribute name="nodeID" type="pdt:guidType" />
   </xs:complexType>
 
   <xs:complexType name="RequiredDocument">
@@ -59,6 +80,7 @@
     <xs:attribute name="type" type="xs:string"/>
     <xs:attribute name="purpose" type="xs:string"/>
     <xs:attribute name="content" type="xs:string"/>
+    <xs:attribute name="nodeID" type="pdt:guidType" />
   </xs:complexType>
 
   <xs:complexType name="GeometricalInformation">
@@ -69,6 +91,7 @@
       <xs:element name="Appearance" type="AppearanceEnum" minOccurs="0"/>
       <xs:element name="ParametricBehaviour" type="ParametricBehaviourEnum" minOccurs="0"/>
     </xs:sequence>
+    <xs:attribute name="nodeID" type="pdt:guidType" />
   </xs:complexType>
 
   <xs:simpleType name="DetailEnum">
