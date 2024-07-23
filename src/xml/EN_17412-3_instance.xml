@@ -1,0 +1,55 @@
+<loin:LevelOfInformationNeed xmlns:loin="https://iso.org/2022/LOIN" xmlns:dt="http://tempuri.org/XMLSchema.xsd">
+  <!--Zero or more repetitions:-->
+  <Specification UUID="97c5a8ae-7807-40c5-9872-7244274373b6" name="Bridge Handover to Client">
+    <!--Optional:-->
+    <Description>Defines the requirements for bridge models when handed over to the client</Description>
+    <!--Optional:-->
+    <Prerequisites purpose="Operation and Maintenance" informationDeliveryMilestone="Handover" sendingActor="Contractor" receivingActor="Client"/>
+    
+	<!--Zero or more repetitions:-->
+	<SpecificationPerObjectType UUID="6416a407-4de9-4b33-9dfa-0cc04c0825f1">
+	  <!--AB: WARNING: Might be inconstent with dt:Object below-->
+      <ObjectType about="http://www.company.org/cum/sonoras" nodeID="eced5812-5929-435f-8a20-7eda5946dffe" date="2004-02-14T19:44:14">
+        <!--1 or more repetitions:-->
+        <dt:Name xml:lang="en">Wing Wall</dt:Name>
+        <!--Zero or more repetitions:-->
+        <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
+        <!--Zero or more repetitions:-->
+        <dt:ReferenceDocument resource="https://identifier.buildingsmart.org/uri/nbs/uniclass2015/1/class/Ss_20_50_10_95" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
+      </ObjectType>
+	  
+      <!--Optional:-->
+      <Documentation>
+        <!--Zero or more repetitions:-->
+        <RequiredDocument type="Technical Drawing" purpose="Archive" content="Horizontal Projection"/>
+      </Documentation>
+	  
+      <!--Optional:-->
+      <GeometricalInformation>
+        <!--Optional:-->
+        <Detail>L5</Detail>
+        <!--Optional:-->
+        <Dimensionality>D3</Dimensionality>
+        <!--Optional:-->
+        <Location>Relative</Location>
+        <!--Optional:-->
+        <Appearance>Textures</Appearance>
+        <!--Optional:-->
+        <ParametricBehaviour>ParametricGeometry</ParametricBehaviour>
+      </GeometricalInformation>
+	  
+      <!--Zero or more repetitions:-->
+      <AlphanumericalInformation nodeID="6996e939-3745-4586-8c41-a0e7d845e04c" date="2018-12-28T20:51:14+01:00">
+        <!--1 or more repetitions:-->
+        <dt:Name xml:lang="en">Required alphanumerical information for Wing Wall</dt:Name>
+       		
+   		  <dt:Name xml:lang="en">Data Template for Wing Wall</dt:Name>
+		  <dt:Definition xml:lang="en">Definition of the data template</dt:Definition>
+		  <dt:Object resource="file://ISO-23887_instance.xml/2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+		  <dt:SetOfProperties resource="file://ISO-23887_instance.xml/19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+		  <dt:Property resource="file://ISO-23887_instance.xml/e6adff2a-19cb-4b04-8f07-89f3934bbb6c"/>
+      </AlphanumericalInformation>
+
+    </SpecificationPerObjectType>
+  </Specification>
+</loin:LevelOfInformationNeed>
