@@ -113,6 +113,7 @@ class ConceptType:
         name = "conceptType"
 
     date: XmlDateTime = field(
+        default_factory=XmlDateTime.now,
         metadata={
             "type": "Attribute",
             "required": True,

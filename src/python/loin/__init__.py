@@ -1,9 +1,10 @@
-from loin.en_17412_3 import (
+from loin.iso_7817_3 import (
     AppearanceEnum,
     DetailEnum,
     DimensionalityEnum,
     Documentation,
     GeometricalInformation,
+    InformationContent,
     LevelOfInformationNeed,
     LocationEnum,
     ParametricBehaviourEnum,
@@ -39,6 +40,7 @@ __all__ = [
     "DimensionalityEnum",
     "Documentation",
     "GeometricalInformation",
+    "InformationContent",
     "LevelOfInformationNeed",
     "LocationEnum",
     "ParametricBehaviourEnum",
