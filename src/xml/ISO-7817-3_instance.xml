@@ -13,8 +13,11 @@
       <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
       <dt:ReferenceDocument resource="https://identifier.buildingsmart.org/uri/nbs/uniclass2015/1/class/Ss_20_50_10_95" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
 
-      <!--nodeId provides a reference to content the defined below -->
+      <!--AB: Should be ObjectType -->
+      <!--AB: TODO: Define the Object(Type) here and not under alphanumerical information. Do not provide a mere reference. -->
       <dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+
+
       <!--nodeId provides a reference to content the defined below -->
       <dt:SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
 
@@ -42,6 +45,7 @@
 
   <AlphanumericalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
     <!--Should be ObjectType. Should be exactly 1. -->
+    <!--AB: TODO: Use a reference here. Warning: This is redundant information since SpecificationPerObjectType already has the Object(Type)  -->
     <Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2022-05-02T09:21:20+01:00">
       <dt:Name xml:lang="en">Wing Wall</dt:Name>
       <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>

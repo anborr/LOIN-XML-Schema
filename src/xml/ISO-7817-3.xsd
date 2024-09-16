@@ -61,7 +61,7 @@
     <xs:complexContent>
       <xs:extension base="pdt:dataTemplateType">
         <xs:sequence>
-            <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
+          <xs:element name="Documentation" type="Documentation" minOccurs="0"/>
           <xs:element name="GeometricalInformation" type="GeometricalInformation" minOccurs="0"/>
         </xs:sequence>
       </xs:extension>
