@@ -15,6 +15,7 @@
 
       <!--AB: Should be ObjectType -->
       <!--AB: TODO: Define the Object(Type) here and not under alphanumerical information. Do not provide a mere reference. -->
+      <!--AB: TODO: PROBLEM: SpecificationPerObjectType is a subtype of dt:dataTemplateType. In dt:dataTemplateType only references are allowed, also for Object.  -->
       <dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
 
 
@@ -43,13 +44,15 @@
     </SpecificationPerObjectType>
   </Specification>
 
-  <AlphanumericalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
-    <!--Should be ObjectType. Should be exactly 1. -->
-    <!--AB: TODO: Use a reference here. Warning: This is redundant information since SpecificationPerObjectType already has the Object(Type)  -->
-    <Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2022-05-02T09:21:20+01:00">
+  <ObjectTypes>
+    <ObjectType nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2022-05-02T09:21:20+01:00">
       <dt:Name xml:lang="en">Wing Wall</dt:Name>
       <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
-    </Object>
+    </ObjectType>
+  </ObjectTypes>
+
+  <AlphanumericalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
+    <!--AB: Removed Object from here   -->
 
     <!--Zero or more repetitions:-->
     <Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673" about="https://datadictionay1.org/75cceb1c-1c7a-44aa-8a75-c3a953e9068b" date="2022-05-02T09:21:20+01:00">
@@ -110,4 +113,5 @@
       <dt:Offset>0</dt:Offset>
     </Unit>
   </AlphanumericalInformation>
+
 </loin:LevelOfInformationNeed>

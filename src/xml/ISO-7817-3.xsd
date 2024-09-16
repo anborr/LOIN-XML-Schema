@@ -10,17 +10,27 @@
 
   <xs:element name="LevelOfInformationNeed">
     <xs:annotation>
-      <xs:documentation>Level of Information Need as defined by EN 17412</xs:documentation>
+      <xs:documentation>Level of Information Need as defined by ISO 7817</xs:documentation>
     </xs:annotation>
     <xs:complexType>
       <xs:sequence>
         <xs:element type="Specification" name="Specification" minOccurs="0" maxOccurs="unbounded"/>
 
-        <!-- AB: If pdt:Library would be a type we could reuse it here. In the current form, we repeat definitions. -->
-        <xs:element name="AlphanumericalInformation">
+        <!-- AB: ObjectTypes are now listed separately  -->
+        <xs:element name="ObjectTypes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Object" type="pdt:objectType" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="ObjectType" type="pdt:objectType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- AB: If pdt:Library would be a type we could reuse it here. In the current form, we repeat definitions. -->
+        <xs:element name="AlphanumericalInformation" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- AB: removed Object from here as it should not be part of AlphanumericalInformation -->
+              <!-- <xs:element name="Object" type="pdt:objectType" minOccurs="0" maxOccurs="unbounded" /> -->
               <xs:element name="Property" type="pdt:propertyType" minOccurs="0" maxOccurs="unbounded" />
               <xs:element name="PhysicalQuantity" type="pdt:physicalQuantityType" minOccurs="0" maxOccurs="unbounded" />
               <xs:element name="SetOfProperties" type="pdt:groupOfPropertiesType" minOccurs="0" maxOccurs="unbounded" />
@@ -34,6 +44,8 @@
             <xs:attribute name="nodeID" type="pdt:guidType"/>
           </xs:complexType>
         </xs:element>
+
+
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -67,6 +79,8 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+
+
 
   <xs:complexType name="Documentation">
     <xs:sequence>

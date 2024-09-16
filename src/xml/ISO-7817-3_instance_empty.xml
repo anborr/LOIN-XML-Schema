@@ -40,7 +40,19 @@
       </GeometricalInformation>
     </SpecificationPerObjectType>
   </Specification>
-  <AlphanumericalInformation>
+  <ObjectTypes>
+    <ObjectType about="http://www.corp.gov/nimborum/gero" nodeID="string" date="2017-01-02T23:25:35">
+      <!--1 or more repetitions:-->
+      <xs:Name xml:lang="string">string</xs:Name>
+      <!--Zero or more repetitions:-->
+      <xs:Definition xml:lang="string">string</xs:Definition>
+      <!--Zero or more repetitions:-->
+      <xs:ReferenceDocument resource="http://www.your.org/iovisque/et" nodeID="string"/>
+      <!--Zero or more repetitions:-->
+      <xs:Object resource="http://www.test.org/imposuit/murmure" nodeID="string"/>
+    </ObjectType>
+  </ObjectTypes>
+   <AlphanumericalInformation>
     <!--Zero or more repetitions:-->
     <Property about="http://www.my.org/circum/aris" nodeID="string" date="2000-09-25T08:18:09">
       <!--1 or more repetitions:-->
@@ -162,16 +174,7 @@
       <xs:URI>string</xs:URI>
     </ReferenceDocument>
     <!--Zero or more repetitions:-->
-    <Object about="http://www.corp.gov/nimborum/gero" nodeID="string" date="2017-01-02T23:25:35">
-      <!--1 or more repetitions:-->
-      <xs:Name xml:lang="string">string</xs:Name>
-      <!--Zero or more repetitions:-->
-      <xs:Definition xml:lang="string">string</xs:Definition>
-      <!--Zero or more repetitions:-->
-      <xs:ReferenceDocument resource="http://www.your.org/iovisque/et" nodeID="string"/>
-      <!--Zero or more repetitions:-->
-      <xs:Object resource="http://www.test.org/imposuit/murmure" nodeID="string"/>
-    </Object>
+
     <!--Zero or more repetitions:-->
     <Dimension about="http://www.my.com/supplex/imponet" nodeID="string" date="2006-12-27T10:49:58">
       <!--1 or more repetitions:-->
