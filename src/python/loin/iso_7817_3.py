@@ -255,15 +255,18 @@ class Specification:
 
 
 @dataclass
-class InformationContent:
+class ObjectTypes:
     object_type: List[ObjectType] = field(
         default_factory=list,
         metadata={
-            "name": "Object",
+            "name": "ObjectType",
             "type": "Element",
             "namespace": "pdt",
         }
     )
+
+@dataclass
+class AlphanumericalInformation:
     property: List[PropertyType] = field(
         default_factory=list,
         metadata={
@@ -362,10 +365,18 @@ class LevelOfInformationNeed:
             "namespace": "",
         }
     )
-    information_content: InformationContent = field(
-        default_factory=InformationContent,
+    object_types: ObjectTypes = field(
+        default_factory=ObjectTypes,
         metadata={
-            "name": "InformationContent",
+            "name": "ObjectTypes",
+            "type": "Element",
+            "namespace": "",
+        }
+    )
+    alphanumericalinformation: AlphanumericalInformation = field(
+        default_factory=AlphanumericalInformation,
+        metadata={
+            "name": "AlphanumericalInformation",
             "type": "Element",
             "namespace": "",
         }

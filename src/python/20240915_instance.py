@@ -47,7 +47,7 @@ length_dimension = DimensionType()
 length_dimension.name.append(MultilingualTextType("Length", "en"))
 length_dimension.name.append(MultilingualTextType("Länge", "de"))
 length_dimension.dimension_exponent_for_length = 1
-loin.information_content.dimension.append(length_dimension)
+loin.alphanumericalinformation.dimension.append(length_dimension)
 length_dimension_reference = ReferenceType(node_id=length_dimension.node_id)
 
 centimeter_unit = UnitType()
@@ -56,7 +56,7 @@ centimeter_unit.name.append(MultilingualTextType("Zentimeter", "de"))
 centimeter_unit.definition.append(MultilingualTextType(
     "Centimeter according to ISO 80000", "en"))
 centimeter_unit.dimension = length_dimension_reference
-loin.information_content.unit.append(centimeter_unit)
+loin.alphanumericalinformation.unit.append(centimeter_unit)
 centimeter_unit_ref = ReferenceType(node_id=centimeter_unit.node_id)
 
 length_quantity = PhysicalQuantityType()
@@ -65,7 +65,7 @@ length_quantity.name.append(MultilingualTextType("Länge", "de"))
 length_quantity.definition.append(MultilingualTextType(
     "Definition of Length physical quantity.", "en"))
 length_quantity.dimensions = length_dimension_reference
-loin.information_content.physical_quantity.append(length_quantity)
+loin.alphanumericalinformation.physical_quantity.append(length_quantity)
 length_quantity_ref = ReferenceType(node_id=length_quantity.node_id)
 
 wingwall = ObjectType()
@@ -73,7 +73,7 @@ wingwall.name.append(MultilingualTextType("Wing Wall", "en"))
 wingwall.name.append(MultilingualTextType("Flügelmauer", "de"))
 wingwall.definition.append(MultilingualTextType(
     "The lateral wall of a bridge abutment.", "en"))
-loin.information_content.object_type.append(wingwall)
+loin.object_types.object_type.append(wingwall)
 wingwall_ref = ReferenceType(node_id=wingwall.node_id)
 
 length = PropertyType()
@@ -84,7 +84,7 @@ length.definition.append(MultilingualTextType(
 length.data_type = real_type
 length.unit.append(centimeter_unit_external_ref)
 length.physical_quantity = length_quantity_external_ref
-loin.information_content.property.append(length)
+loin.alphanumericalinformation.property.append(length)
 length_ref = ReferenceType(node_id=length.node_id)
 
 width = PropertyType()
@@ -95,7 +95,7 @@ width.definition.append(MultilingualTextType(
 width.data_type = real_type
 width.unit.append(centimeter_unit_ref)
 width.physical_quantity = length_quantity_ref
-loin.information_content.property.append(width)
+loin.alphanumericalinformation.property.append(width)
 width_ref = ReferenceType(node_id=width.node_id)
 
 dimensions = GroupOfPropertiesType()
@@ -105,7 +105,7 @@ dimensions.definition.append(MultilingualTextType(
     "Definition of Dimensions group of properties.", "en"))
 dimensions.property.append(length_ref)
 dimensions.property.append(width_ref)
-loin.information_content.set_of_properties.append(dimensions)
+loin.alphanumericalinformation.set_of_properties.append(dimensions)
 dimensions_ref = ReferenceType(node_id=dimensions.node_id)
 
 
