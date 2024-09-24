@@ -1,19 +1,18 @@
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
-from loin.iso_23887 import (
+from loin.iso_23387 import (
     DataTemplateType,
-    ObjectType,
-    PropertyType,
-    PhysicalQuantityType,
-    GroupOfPropertiesType,
-    ReferenceDocumentType,
     DimensionType,
-    UnitType
+    GroupOfPropertiesType,
+    ObjectType,
+    PhysicalQuantityType,
+    PropertyType,
+    ReferenceDocumentType,
+    UnitType,
 )
-from loin.utils import new_uuid
 
-__NAMESPACE__ = "https://iso.org/2022/LOIN"
+__NAMESPACE__ = "https://iso.org/2024/LOIN"
 
 
 class AppearanceEnum(Enum):
@@ -239,7 +238,7 @@ class Specification:
         }
     )
     node_id: Optional[str] = field(
-        default_factory=new_uuid,
+        default=None,
         metadata={
             "name": "nodeID",
             "type": "Attribute",
@@ -255,107 +254,12 @@ class Specification:
 
 
 @dataclass
-class ObjectTypes:
-    object_type: List[ObjectType] = field(
-        default_factory=list,
-        metadata={
-            "name": "ObjectType",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-
-@dataclass
-class AlphanumericalInformation:
-    property: List[PropertyType] = field(
-        default_factory=list,
-        metadata={
-            "name": "Property",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    physical_quantity: List[PhysicalQuantityType] = field(
-        default_factory=list,
-        metadata={
-            "name": "PhysicalQuantity",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    set_of_properties: List[GroupOfPropertiesType] = field(
-        default_factory=list,
-        metadata={
-            "name": "SetOfProperties",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    purpose: List[GroupOfPropertiesType] = field(
-        default_factory=list,
-        metadata={
-            "name": "Purpose",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    intended_use: List[GroupOfPropertiesType] = field(
-        default_factory=list,
-        metadata={
-            "name": "IntendedUse",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    user_defined: List[GroupOfPropertiesType] = field(
-        default_factory=list,
-        metadata={
-            "name": "UserDefined",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    reference_document: List[ReferenceDocumentType] = field(
-        default_factory=list,
-        metadata={
-            "name": "ReferenceDocument",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    dimension: List[DimensionType] = field(
-        default_factory=list,
-        metadata={
-            "name": "Dimension",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    unit: List[UnitType] = field(
-        default_factory=list,
-        metadata={
-            "name": "Unit",
-            "type": "Element",
-            "namespace": "pdt",
-        }
-    )
-    node_id: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "nodeID",
-            "type": "Attribute",
-            "pattern": r"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
-        }
-    )
-
-
-@dataclass
 class LevelOfInformationNeed:
     """
-    Level of Information Need as defined by EN 17412.
+    Level of Information Need as defined by ISO 7817.
     """
     class Meta:
-        namespace = "https://iso.org/2022/LOIN"
+        namespace = "https://iso.org/2024/LOIN"
 
     specification: List[Specification] = field(
         default_factory=list,
@@ -365,19 +269,114 @@ class LevelOfInformationNeed:
             "namespace": "",
         }
     )
-    object_types: ObjectTypes = field(
-        default_factory=ObjectTypes,
+    object_types: Optional["LevelOfInformationNeed.ObjectTypes"] = field(
+        default=None,
         metadata={
             "name": "ObjectTypes",
             "type": "Element",
             "namespace": "",
+            "required": True,
         }
     )
-    alphanumericalinformation: AlphanumericalInformation = field(
-        default_factory=AlphanumericalInformation,
+    alphanumerical_information: List["LevelOfInformationNeed.AlphanumericalInformation"] = field(
+        default_factory=list,
         metadata={
             "name": "AlphanumericalInformation",
             "type": "Element",
             "namespace": "",
         }
     )
+
+    @dataclass
+    class ObjectTypes:
+        object_type: List[ObjectType] = field(
+            default_factory=list,
+            metadata={
+                "name": "ObjectType",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+
+    @dataclass
+    class AlphanumericalInformation:
+        property: List[PropertyType] = field(
+            default_factory=list,
+            metadata={
+                "name": "Property",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        physical_quantity: List[PhysicalQuantityType] = field(
+            default_factory=list,
+            metadata={
+                "name": "PhysicalQuantity",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        set_of_properties: List[GroupOfPropertiesType] = field(
+            default_factory=list,
+            metadata={
+                "name": "SetOfProperties",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        purpose: List[GroupOfPropertiesType] = field(
+            default_factory=list,
+            metadata={
+                "name": "Purpose",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        intended_use: List[GroupOfPropertiesType] = field(
+            default_factory=list,
+            metadata={
+                "name": "IntendedUse",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        user_defined: List[GroupOfPropertiesType] = field(
+            default_factory=list,
+            metadata={
+                "name": "UserDefined",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        reference_document: List[ReferenceDocumentType] = field(
+            default_factory=list,
+            metadata={
+                "name": "ReferenceDocument",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        dimension: List[DimensionType] = field(
+            default_factory=list,
+            metadata={
+                "name": "Dimension",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        unit: List[UnitType] = field(
+            default_factory=list,
+            metadata={
+                "name": "Unit",
+                "type": "Element",
+                "namespace": "",
+            }
+        )
+        node_id: Optional[str] = field(
+            default=None,
+            metadata={
+                "name": "nodeID",
+                "type": "Attribute",
+                "pattern": r"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+            }
+        )
