@@ -1,12 +1,12 @@
 from dataclasses import dataclass
 from typing import List
-from loin.en_17412_3 import (
+from loin.iso_7817_3 import (
     LevelOfInformationNeed,
     Specification,
     SpecificationPerObjectType,
     ObjectType,
 )
-from loin.iso_23887 import (
+from loin.iso_23387 import (
     DataTemplateType,
     DatatypeType,
     DatatypeTypeName,
@@ -92,13 +92,17 @@ my_data_template = DataTemplateType(date=date)
 # my_data_template.object_value = my_object_type  # not allowed, must use ref
 my_data_template.object_value.append(my_object_type_ref)
 my_data_template.property = [width_property_ref, length_property_ref]
-specification_for_wingwalls.alphanumerical_information.append(my_data_template)
+my_data_template_ref = ReferenceType(node_id=my_data_template.node_id)
+
+#AB: We now call alphanumericalInformation data_template which is not perfect
+# a referencetype is required here
+specification_for_wingwalls.data_template.append(my_data_template_ref)
 
 # Create a container object to hold objects of different types
-container = Container(Loin=[my_loin],
-                      Object=[my_object_type],  # PD: Fix for double definition of object could be to not pass it here, but use an empty list. Then the Object property of the Container would not be needed anymore.
-                      Unit=[centimeter_unit],
-                      Property=[width_property, length_property])
+#container = Container(Loin=[my_loin],
+#                      Object=[my_object_type],  # PD: Fix for double definition of object could be to not pass it here, but use an empty list. Then the Object property of the Container would not be needed anymore.
+#                      Unit=[centimeter_unit],
+#                      Property=[width_property, length_property])
 
 
 # Create a SerializerConfig with custom settings
@@ -110,7 +114,9 @@ serializer_config = SerializerConfig(
 
 # Serialize the object into an XML instance file
 serializer = XmlSerializer(config=serializer_config)
-xml_instance = serializer.render(container)
+
+# AB: Was 'container' before
+xml_instance = serializer.render(my_loin)
 
 # Write the XML instance to a file
 with open("output.xml", "w") as f:
