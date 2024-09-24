@@ -6,7 +6,7 @@
   xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="unqualified"
   attributeFormDefault="unqualified" vc:minVersion="1.1">
 
-  <xs:import namespace="http://tempuri.org/XMLSchema.xsd" schemaLocation="ISO-23887.xsd"/>
+  <xs:import namespace="http://tempuri.org/XMLSchema.xsd" schemaLocation="ISO-23387.xsd"/>
 
   <xs:element name="LevelOfInformationNeed">
     <xs:annotation>
