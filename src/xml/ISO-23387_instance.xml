@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dt:Library xmlns:dt="http://tempuri.org/XMLSchema.xsd" nodeID="ba13388f-0253-4595-be2c-66592d4b29eb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/XMLSchema.xsd ISO-23887.xsd">
+<dt:Library xmlns:dt="http://tempuri.org/XMLSchema.xsd" nodeID="ba13388f-0253-4595-be2c-66592d4b29eb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/XMLSchema.xsd ISO-23387.xsd">
 	<dt:Name xml:lang="en">My data template library exchange</dt:Name>
 	<dt:Name xml:lang="no">Min datamal-bibliotekutveksling</dt:Name>
 	<dt:Name xml:lang="de">Austausch meiner Datenvorlagenbibliothek</dt:Name>
